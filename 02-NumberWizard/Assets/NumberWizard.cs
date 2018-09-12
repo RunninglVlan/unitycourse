@@ -12,11 +12,12 @@ class NumberWizard : MonoBehaviour {
 	void Start() {
 		max = MAX;
 		min = MIN;
-		
-		print("Welcome to Number Wizard");
 
-		print("The highest number you can pick is " + MAX);
-		print("The lowest number you can pick is " + MIN);
+		print("Welcome to Number Wizard");
+		print("Pick a number, don't tell me what it is...");
+
+		print($"The highest number you can pick is {MAX}");
+		print($"The lowest number you can pick is {MIN}");
 
 		nextGuess();
 		printQuestion();
@@ -32,11 +33,13 @@ class NumberWizard : MonoBehaviour {
 			max = guess;
 			nextGuess();
 			printQuestion();
-		}
-
-		if (Input.GetKeyDown(KeyCode.Return)) {
+		} else if (Input.GetKeyDown(KeyCode.Return)) {
 			printAnswer();
 		}
+	}
+
+	private void printQuestion() {
+		print($"Is the number higher [↑] or lower [↓] than {guess}? Maybe it is equal [⏎]?");
 	}
 
 	private void nextGuess() {
@@ -51,12 +54,8 @@ class NumberWizard : MonoBehaviour {
 		printAnswer();
 	}
 
-	private void printQuestion() {
-		print("Is the number higher [↑] or lower [↓] than " + guess + "? Maybe it is equal [⏎]?");
-	}
-
 	private void printAnswer() {
-		print("You picked " + guess);
+		print($"You picked {guess}");
 		Start();
 	}
 }
