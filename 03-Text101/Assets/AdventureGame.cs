@@ -1,15 +1,20 @@
-﻿using System.Collections; 
-using System.Collections.Generic; 
-using UnityEngine; 
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class AdventureGame : MonoBehaviour {
 
     [SerializeField]
     Text textComponent;
+    [SerializeField]
+    State startingState;
+
+    State state;
 
     void Start() {
-        textComponent.text = "My story text";
+        state = startingState;
+        textComponent.text = state.getStoryText();
     }
 
     void Update() {

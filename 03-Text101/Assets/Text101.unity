@@ -393,8 +393,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.4974976, y: 209}
-  m_SizeDelta: {x: 842.3, y: 106.7}
+  m_AnchoredPosition: {x: 1.4974976, y: 232}
+  m_SizeDelta: {x: 842.3, y: 80.056}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &405532835
 MonoBehaviour:
@@ -1007,8 +1007,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.4975, y: -71}
-  m_SizeDelta: {x: 842.31, y: 346.3}
+  m_AnchoredPosition: {x: 1.4975, y: -62.949}
+  m_SizeDelta: {x: 842.3, y: 360.43}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &960405164
 MonoBehaviour:
@@ -1147,6 +1147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textComponent: {fileID: 1246899650}
+  startingState: {fileID: 11400000, guid: 86556e7b8acec5c4f8da940fdebe71aa, type: 2}
 --- !u!4 &1083367962
 Transform:
   m_ObjectHideFlags: 0
@@ -1332,8 +1333,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.5, y: 209.4}
-  m_SizeDelta: {x: 872.8, y: 91.2}
+  m_AnchoredPosition: {x: 1.5, y: 232}
+  m_SizeDelta: {x: 872.8, y: 80.052}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1129117991
 MonoBehaviour:
@@ -1356,7 +1357,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 80
+    m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 4
@@ -1482,8 +1483,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.5, y: -71}
-  m_SizeDelta: {x: 842.3, y: 346.3}
+  m_AnchoredPosition: {x: 1.5, y: -63.442}
+  m_SizeDelta: {x: 842.3, y: 361.42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1246899650
 MonoBehaviour:
@@ -1506,7 +1507,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 4
@@ -1517,19 +1518,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Festers. Everywhere. Armed mostly with gas-powered rock flingers.
-
-    At least 10 of them guarding the hangar door. Typical.
-
-
-    Could try punching my was through. Or sneaking the long way to the emergency exit.
-
-
-    What should I do?
-
-    1. Take them head on - rush the 10 guards.
-
-    2. Sneak my way to the emergency exit.'
+  m_Text: 
 --- !u!222 &1246899651
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2009,8 +1998,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.4974976, y: -73}
-  m_SizeDelta: {x: 915.6, y: 376.45}
+  m_AnchoredPosition: {x: 1.4974976, y: -63.5}
+  m_SizeDelta: {x: 915.6, y: 393.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1742645670
 MonoBehaviour:
