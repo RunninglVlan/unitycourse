@@ -18,4 +18,6 @@ MonoBehaviour:
     (clockwise you notice) and then both men dash off with much haste.\r\n\r\nWhat
     to do?\r\n1. Quick, uncrank that valve, they were clearly up to no good.\r\n2.
     Chase the men."
-  nextStates: []
+  nextStates:
+  - {fileID: 11400000, guid: f9b639dfb3863ea48a9d436775eb45e7, type: 2}
+  - {fileID: 11400000, guid: 1f62330ffcfabf142888e81cac8fa397, type: 2}

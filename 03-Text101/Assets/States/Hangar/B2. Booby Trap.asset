@@ -15,4 +15,5 @@ MonoBehaviour:
     and make an almighty sprint towards the door.\r\n\r\nAnd, of course, its booby
     trapped. Maybe next time you want to ask what the red wires are wrapped around
     the door.\r\n\r\n1. Continue..."
-  nextStates: []
+  nextStates:
+  - {fileID: 11400000, guid: c6fb223e7847cff45929db5a2c5f18f0, type: 2}

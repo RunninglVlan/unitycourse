@@ -15,4 +15,6 @@ MonoBehaviour:
     there. \r\n\r\nWell, thats odd.\r\n\r\nHave you just been freed? And by whom?
     And why?\r\n\r\nNo time for that now. We have escaping to do. Whats the plan?\r\n1.
     Wait a bit longer.\r\n2. Get running."
-  nextStates: []
+  nextStates:
+  - {fileID: 11400000, guid: e05aee5ffc983cf46bfe28a2ec76bafd, type: 2}
+  - {fileID: 11400000, guid: 77c23f7f6318d3843aff6055ed6fd773, type: 2}

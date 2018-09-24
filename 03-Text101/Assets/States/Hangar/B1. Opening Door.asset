@@ -15,4 +15,6 @@ MonoBehaviour:
     Keys jangle. The door starts to unlock.\r\n\r\nWhat to do?\r\n1. Wait a little
     longer, it seemed to work last time.\r\n2. Rush the door and thrust a handful
     of knuckles through the chestplate of whoever enters."
-  nextStates: []
+  nextStates:
+  - {fileID: 11400000, guid: 13b8225e82c4170459c9b862a107a028, type: 2}
+  - {fileID: 11400000, guid: 5a22fe7651df3ec4b87719addcf1e42c, type: 2}

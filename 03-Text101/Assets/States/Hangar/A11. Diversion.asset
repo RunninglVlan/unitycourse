@@ -17,4 +17,6 @@ MonoBehaviour:
     the explosion.\r\n\r\nWho were those men? Friend or foe? That will have to wait.
     Time to get out of here.\r\n\r\nWhat now?\r\n1. Mad sprint to the nearest airship.\r\n2.
     Quick scrounge for weapons, then mad sprint to the nearest airship."
-  nextStates: []
+  nextStates:
+  - {fileID: 11400000, guid: 5d6745a02d69dd8468f660529e73376a, type: 2}
+  - {fileID: 11400000, guid: e5499c9d1f5fe9149a663a9b9f76f389, type: 2}

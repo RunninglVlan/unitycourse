@@ -18,4 +18,5 @@ MonoBehaviour:
     the exit ahead.\r\n\r\nSomething behind you gives a grinding screech. Metal eating
     into metal. You leap for the door and slide through on your stomach, just as all
     hell breaks lose behind you.\r\n\r\n1. Continue..."
-  nextStates: []
+  nextStates:
+  - {fileID: 11400000, guid: 0ab4ec34ae066b04eadfdc87917ba0c1, type: 2}

@@ -18,4 +18,5 @@ MonoBehaviour:
     your way around the edge of the pumping station and see daylight.\r\n\r\nWhat!
     An almighty screech pierces the air. Gears grinding. Steam spooshing from cracks
     in pipes. And then, a deafening roar....\r\n\r\n1. Continue..."
-  nextStates: []
+  nextStates:
+  - {fileID: 11400000, guid: c6fb223e7847cff45929db5a2c5f18f0, type: 2}

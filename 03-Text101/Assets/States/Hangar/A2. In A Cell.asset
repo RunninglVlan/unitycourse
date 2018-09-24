@@ -16,4 +16,6 @@ MonoBehaviour:
     together with plate metal and thick red wires.\r\n\r\nYou have no idea where you
     are. And your head hurts.\r\n\r\nSo, what to do now, slugger?\r\n1. Wait it out.
     My head hurts.\r\n2. Slam into the door with all my might."
-  nextStates: []
+  nextStates:
+  - {fileID: 11400000, guid: 9457b19998893da43831744550aa3450, type: 2}
+  - {fileID: 11400000, guid: 88fa6d0b501254946a3ed8b0d595a319, type: 2}

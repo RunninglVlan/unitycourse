@@ -14,4 +14,5 @@ MonoBehaviour:
   storyText: "You give it a good 10 minutes. No dice. Not going to happen.\r\n\r\nYou
     do realise that you have no idea how to pick a lock right? You're an airship pilot,
     not a common thief.\r\n\r\nSo what now?\r\n1. Fine, try to pry it."
-  nextStates: []
+  nextStates:
+  - {fileID: 11400000, guid: a65ee5e6ca26aff44bf882444d2bd985, type: 2}

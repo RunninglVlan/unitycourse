@@ -18,4 +18,6 @@ MonoBehaviour:
     of leverage, maybe a mini pulley system with those wires and the cogs.\r\n\r\nHow
     to proceed?\r\n1. No time to waste, grab the pipe, start wacking.\r\n2. Take the
     time to build a leverage-gadget."
-  nextStates: []
+  nextStates:
+  - {fileID: 11400000, guid: bf111d80f962a774cb8b7bf75b0119cf, type: 2}
+  - {fileID: 11400000, guid: bf111d80f962a774cb8b7bf75b0119cf, type: 2}

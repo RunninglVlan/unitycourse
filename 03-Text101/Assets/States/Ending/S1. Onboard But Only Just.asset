@@ -17,4 +17,5 @@ MonoBehaviour:
     group of Festers. \r\n\r\n\"So long suckers! May we never meet again!\", you holler.
     You may, you may not. Time will tell. \r\n\r\nYou've won this battle. Now, on
     with the war!\r\n\r\n1. Continue..."
-  nextStates: []
+  nextStates:
+  - {fileID: 11400000, guid: e343a075058177a4c957f91696c2c14b, type: 2}

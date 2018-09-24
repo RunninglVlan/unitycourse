@@ -16,4 +16,6 @@ MonoBehaviour:
     you is the emergency exit door. It has an oversized, cast iron lock hanging from
     a bolted handle. You could try picking the lock, or maybe look for a way to pry
     it off.\r\n\r\nWhat to do?\r\n1. Pick it.\r\n2. Pry it."
-  nextStates: []
+  nextStates:
+  - {fileID: 11400000, guid: a3b5777b6e118f243aa28c204ba3e6fd, type: 2}
+  - {fileID: 11400000, guid: a65ee5e6ca26aff44bf882444d2bd985, type: 2}
