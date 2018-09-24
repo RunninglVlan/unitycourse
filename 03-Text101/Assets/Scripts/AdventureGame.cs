@@ -40,5 +40,10 @@ public class AdventureGame : MonoBehaviour
                 textComponent.text = state.getStoryText();
             }
         }
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            state = startingState;
+            textComponent.text = state.getStoryText();
+        }
     }
 }

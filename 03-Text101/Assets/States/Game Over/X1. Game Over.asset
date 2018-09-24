@@ -9,8 +9,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 802cefc4be304174f9b0915f800ce3b7, type: 3}
-  m_Name: Room 2
+  m_Name: X1. Game Over
   m_EditorClassIdentifier: 
-  storyText: This look like room 2.
+  storyText: "Well, that clearly wasn't the right choice. \r\n\r\nYou failed.\r\n\r\nNo
+    parade for you.\r\n\r\nWant to try again?\r\n1. Yes, this time I shall taste glory.\r\n2.
+    No, I'm going to go sulk for a while."
   nextStates:
   - {fileID: 11400000, guid: 86556e7b8acec5c4f8da940fdebe71aa, type: 2}
+  - {fileID: 11400000, guid: e343a075058177a4c957f91696c2c14b, type: 2}
