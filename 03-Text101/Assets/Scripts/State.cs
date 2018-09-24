@@ -6,7 +6,7 @@ using UnityEngine;
 public class State : ScriptableObject
 {
 
-    [TextArea(3, 13)]
+    [TextArea(4, 14)]
     [SerializeField]
     string storyText;
 
