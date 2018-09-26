@@ -13,11 +13,6 @@ public class AdventureGame : MonoBehaviour
 
     State state;
 
-    Dictionary<int, KeyCode> indexKeys = new Dictionary<int, KeyCode> {
-        { 0, KeyCode.Alpha1 },
-        { 1, KeyCode.Alpha2 }
-    };
-
     void Start()
     {
         state = startingState;
@@ -32,19 +27,19 @@ public class AdventureGame : MonoBehaviour
     private void manageState()
     {
         var nextStates = state.getNextStates();
-        for (int i = 0; i < nextStates.Length; i++)
+        for (int index = 0; index < nextStates.Length; index++)
         {
-            if (Input.GetKeyDown(indexKeys[i]))
+            if (Input.GetKeyDown(KeyCode.Alpha1 + index))
             {
-                state = nextStates[i];
-                textComponent.text = state.getStoryText();
+                state = nextStates[index];
             }
         }
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
             state = startingState;
-            textComponent.text = state.getStoryText();
         }
+
+        textComponent.text = state.getStoryText();
     }
 }
