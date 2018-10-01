@@ -21,13 +21,13 @@ class NumberWizard : MonoBehaviour
 
     public void setMinToGuess()
     {
-        min = guess;
+        min = guess + 1;
         nextGuess();
     }
 
     public void setMaxToGuess()
     {
-        max = guess;
+        max = guess - 1;
         nextGuess();
     }
 
