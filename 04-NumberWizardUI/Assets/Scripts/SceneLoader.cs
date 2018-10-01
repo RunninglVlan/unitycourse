@@ -7,12 +7,12 @@ public class SceneLoader : MonoBehaviour
 {
     public void nextScene()
     {
-		int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-		SceneManager.LoadScene(currentSceneIndex + 1);
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex + 1);
     }
 
     public void startScene()
     {
-		SceneManager.LoadScene(0);
+        SceneManager.LoadScene(0);
     }
 }

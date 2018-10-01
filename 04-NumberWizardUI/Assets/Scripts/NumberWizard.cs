@@ -36,7 +36,7 @@ class NumberWizard : MonoBehaviour
         int previousGuess = guess;
         for (int i = 0; i < max - min; i++)
         {
-            int nextGuess = Mathf.FloorToInt(Random.Range(min, max + 1));
+            int nextGuess = Random.Range(min, max + 1);
             if (previousGuess != nextGuess)
             {
                 setGuess(nextGuess);
