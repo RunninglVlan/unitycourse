@@ -10,7 +10,7 @@ class NumberWizard : MonoBehaviour
     int min;
 
     [SerializeField]
-    TextMeshProUGUI textComponent;
+    TextMeshProUGUI guessTextComponent;
 
     private int guess;
 
@@ -48,6 +48,6 @@ class NumberWizard : MonoBehaviour
     private void setGuess(int guess)
     {
         this.guess = guess;
-        textComponent.text = guess.ToString();
+        guessTextComponent.text = guess.ToString();
     }
 }
