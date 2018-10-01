@@ -1885,7 +1885,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max: 1000
   min: 0
-  textComponent: {fileID: 1462127198}
+  guessTextComponent: {fileID: 1462127198}
 --- !u!4 &1525704086
 Transform:
   m_ObjectHideFlags: 0
