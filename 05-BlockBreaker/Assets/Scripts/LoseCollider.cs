@@ -8,6 +8,7 @@ public class LoseCollider : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        SceneManager.LoadScene("GameOver");
+        int lastSceneIndex = SceneManager.sceneCountInBuildSettings - 1;
+        SceneManager.LoadScene(lastSceneIndex);
     }
 }
