@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class LoseCollider : MonoBehaviour
 {
 
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D _)
     {
         int lastSceneIndex = SceneManager.sceneCountInBuildSettings - 1;
         SceneManager.LoadScene(lastSceneIndex);
