@@ -5,6 +5,8 @@ using UnityEngine;
 public class Paddle : MonoBehaviour
 {
 
+    [SerializeField] int paddleWidth = 2;
+
     private float cameraWidth;
 
     void Start()
@@ -16,7 +18,8 @@ public class Paddle : MonoBehaviour
     void Update()
     {
         var mousePositionX = Input.mousePosition.x / Screen.width * cameraWidth;
-        var newPosition = new Vector2(mousePositionX, transform.position.y);
+        var newPositionX = Mathf.Clamp(mousePositionX, 0 + paddleWidth / 2, cameraWidth - paddleWidth / 2);
+        var newPosition = new Vector2(newPositionX, transform.position.y);
         transform.position = newPosition;
     }
 }
