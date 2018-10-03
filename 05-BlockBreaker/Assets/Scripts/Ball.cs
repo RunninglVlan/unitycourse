@@ -9,7 +9,7 @@ public class Ball : MonoBehaviour
     [SerializeField] Vector2 launchImpulse;
 
     private Vector2 distanceToPaddle;
-    private bool ballLaunched = false;
+    private bool isLaunched = false;
 
     void Start()
     {
@@ -18,7 +18,7 @@ public class Ball : MonoBehaviour
 
     void Update()
     {
-        if (!ballLaunched)
+        if (!isLaunched)
         {
             stickToThePaddle();
             launchOnMouseClick();
@@ -27,7 +27,7 @@ public class Ball : MonoBehaviour
 
     private void stickToThePaddle()
     {
-        var paddlePosition = new Vector2(paddle.transform.position.x, paddle.transform.position.y);
+        Vector2 paddlePosition = paddle.transform.position;
         transform.position = paddlePosition + distanceToPaddle;
     }
 
@@ -35,7 +35,7 @@ public class Ball : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            ballLaunched = true;
+            isLaunched = true;
             GetComponent<Rigidbody2D>().AddForce(launchImpulse, ForceMode2D.Impulse);
         }
     }
