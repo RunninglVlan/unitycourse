@@ -14,6 +14,15 @@ public class Ball : MonoBehaviour
     void Start()
     {
         distanceToPaddle = transform.position - paddle.transform.position;
+        paddle.GetComponent<AudioSource>().time = 0.2f;
+    }
+
+    void OnCollisionEnter2D(Collision2D _)
+    {
+        if (isLaunched)
+        {
+            GetComponent<AudioSource>().Play();
+        }
     }
 
     void Update()
@@ -37,6 +46,7 @@ public class Ball : MonoBehaviour
         {
             isLaunched = true;
             GetComponent<Rigidbody2D>().AddForce(launchImpulse, ForceMode2D.Impulse);
+            paddle.GetComponent<AudioSource>().Play();
         }
     }
 }
