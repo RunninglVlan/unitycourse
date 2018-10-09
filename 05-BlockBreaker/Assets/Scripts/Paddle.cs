@@ -6,6 +6,7 @@ public class Paddle : MonoBehaviour
 {
 
     [SerializeField] int paddleWidth = 2;
+    [SerializeField] float clipStart = 0.2f;
 
     private float cameraWidth;
 
@@ -13,6 +14,7 @@ public class Paddle : MonoBehaviour
     {
         var camera = Camera.main;
         cameraWidth = camera.orthographicSize * 2 * camera.aspect;
+        GetComponent<AudioSource>().time = clipStart;
     }
 
     void Update()

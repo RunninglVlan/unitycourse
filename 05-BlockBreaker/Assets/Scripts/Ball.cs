@@ -14,7 +14,6 @@ public class Ball : MonoBehaviour
     void Start()
     {
         distanceToPaddle = transform.position - paddle.transform.position;
-        paddle.GetComponent<AudioSource>().time = 0.2f;
     }
 
     void OnCollisionEnter2D(Collision2D _)
