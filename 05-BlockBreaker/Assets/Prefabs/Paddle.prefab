@@ -180,6 +180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paddleWidth: 2
+  clipStart: 0.2
 --- !u!212 &212984663670659668
 SpriteRenderer:
   m_ObjectHideFlags: 1
