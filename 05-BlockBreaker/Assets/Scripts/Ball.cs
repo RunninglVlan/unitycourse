@@ -7,6 +7,7 @@ public class Ball : MonoBehaviour
 
     [SerializeField] Paddle paddle;
     [SerializeField] Vector2 launchImpulse;
+    [SerializeField] AudioClip[] collisionSounds;
 
     private Vector2 distanceToPaddle;
     private bool isLaunched = false;
@@ -20,7 +21,8 @@ public class Ball : MonoBehaviour
     {
         if (isLaunched)
         {
-            GetComponent<AudioSource>().Play();
+            AudioClip sound = collisionSounds[Random.Range(0, collisionSounds.Length)];
+            GetComponent<AudioSource>().PlayOneShot(sound);
         }
     }
 
