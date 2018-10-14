@@ -11,4 +11,13 @@ public class Level : MonoBehaviour
     {
         breakableBlocks++;
     }
+
+    public void removeBreakableBlock()
+    {
+        breakableBlocks--;
+        if (breakableBlocks <= 0)
+        {
+            FindObjectOfType<SceneLoader>().nextScene();
+        }
+    }
 }

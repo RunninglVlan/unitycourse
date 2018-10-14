@@ -186,7 +186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paddle: {fileID: 0}
-  launchImpulse: {x: 0, y: 15}
+  launchImpulse: {x: 5, y: 15}
   collisionSounds:
   - {fileID: 8300000, guid: e347ebbac6ba84a4191a9d04ac1be5cb, type: 3}
   - {fileID: 8300000, guid: be296136c2ac3e24aa860b2f8d7fbb5f, type: 3}
