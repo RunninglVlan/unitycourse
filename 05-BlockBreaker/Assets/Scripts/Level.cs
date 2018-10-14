@@ -7,8 +7,8 @@ public class Level : MonoBehaviour
 
     [SerializeField] int breakableBlocks;
 
-    void Start()
+    public void addBreakableBlock()
     {
-        breakableBlocks = FindObjectsOfType<Block>().Length;
+        breakableBlocks++;
     }
 }
