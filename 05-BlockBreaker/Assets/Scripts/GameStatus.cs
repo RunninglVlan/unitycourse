@@ -35,6 +35,11 @@ public class GameStatus : MonoBehaviour
         showScore();
     }
 
+    public void reset()
+    {
+        Destroy(gameObject);
+    }
+
     public void increaseScore()
     {
         currentScore += pointsForDestroyedBlock;
