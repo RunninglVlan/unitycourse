@@ -16,6 +16,19 @@ public class GameStatus : MonoBehaviour
 
     int currentScore = 0;
 
+    void Awake()
+    {
+        var gameStatuses = FindObjectsOfType<GameStatus>().Length;
+        if (gameStatuses > 1)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+        }
+    }
+
     void Start()
     {
         Time.timeScale = gameSpeed;
