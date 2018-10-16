@@ -903,7 +903,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 634854869}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 789962058}
@@ -1069,7 +1069,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1642168419119228, guid: 66280f9df04f94e42b223dc415876d9e, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1176819702164980, guid: 66280f9df04f94e42b223dc415876d9e, type: 2}
       propertyPath: m_IsActive
@@ -1450,6 +1450,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4638513752088336, guid: b29ee7c567f655e47a6bb139515f0df2,
     type: 2}
   m_PrefabInternal: {fileID: 843145621}
+--- !u!114 &869278575 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114070175652178330, guid: 66280f9df04f94e42b223dc415876d9e,
+    type: 2}
+  m_PrefabInternal: {fileID: 640294902}
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
 --- !u!1001 &904013543
 Prefab:
   m_ObjectHideFlags: 0
@@ -2773,6 +2779,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 114468747312734782, guid: 498d5a8669f8c1f44b61671e3c5bd1cc,
+        type: 2}
+      propertyPath: scoreTextComponent
+      value: 
+      objectReference: {fileID: 869278575}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 498d5a8669f8c1f44b61671e3c5bd1cc, type: 2}
   m_IsPrefabAsset: 0
