@@ -9,7 +9,7 @@ public class GameStatus : MonoBehaviour
     [SerializeField]
     float gameSpeed = 1;
     [SerializeField]
-    int pointsPerDestroyedBlock = 25;
+    int pointsForDestroyedBlock = 25;
 
     [SerializeField]
     int currentScore = 0;
@@ -21,6 +21,6 @@ public class GameStatus : MonoBehaviour
 
     public void increaseScore()
     {
-        currentScore += pointsPerDestroyedBlock;
+        currentScore += pointsForDestroyedBlock;
     }
 }

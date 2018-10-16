@@ -17,6 +17,11 @@ public class Block : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D _)
     {
+        destroyBlock();
+    }
+
+    private void destroyBlock()
+    {
         AudioSource.PlayClipAtPoint(breakSound, Camera.main.transform.position);
         level.removeBreakableBlock();
         FindObjectOfType<GameStatus>().increaseScore();
