@@ -6,6 +6,7 @@ public class Block : MonoBehaviour
 {
 
     [SerializeField] AudioClip breakSound;
+    [SerializeField] GameObject sparklesEffect;
 
     Level level;
 
@@ -22,9 +23,16 @@ public class Block : MonoBehaviour
 
     private void destroyBlock()
     {
-        AudioSource.PlayClipAtPoint(breakSound, Camera.main.transform.position);
+        playEffects();
         level.removeBreakableBlock();
         FindObjectOfType<GameSession>().increaseScore();
         Destroy(gameObject);
+    }
+
+    private void playEffects()
+    {
+        AudioSource.PlayClipAtPoint(breakSound, Camera.main.transform.position);
+        GameObject sparkles = Instantiate(sparklesEffect, transform.position, transform.rotation);
+        Destroy(sparkles, 1);
     }
 }
