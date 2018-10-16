@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class GameStatus : MonoBehaviour
+public class GameSession : MonoBehaviour
 {
 
     [Range(0.1f, 10)]
@@ -18,7 +18,7 @@ public class GameStatus : MonoBehaviour
 
     void Awake()
     {
-        var gameStatuses = FindObjectsOfType<GameStatus>().Length;
+        var gameStatuses = FindObjectsOfType<GameSession>().Length;
         if (gameStatuses > 1)
         {
             Destroy(gameObject);

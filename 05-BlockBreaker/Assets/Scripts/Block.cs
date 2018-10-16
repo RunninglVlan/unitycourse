@@ -24,7 +24,7 @@ public class Block : MonoBehaviour
     {
         AudioSource.PlayClipAtPoint(breakSound, Camera.main.transform.position);
         level.removeBreakableBlock();
-        FindObjectOfType<GameStatus>().increaseScore();
+        FindObjectOfType<GameSession>().increaseScore();
         Destroy(gameObject);
     }
 }
