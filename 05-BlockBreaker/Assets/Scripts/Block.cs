@@ -13,12 +13,18 @@ public class Block : MonoBehaviour
     void Start()
     {
         level = FindObjectOfType<Level>();
-        level.addBreakableBlock();
+        if (tag == "Breakable")
+        {
+            level.addBreakableBlock();
+        }
     }
 
     void OnCollisionEnter2D(Collision2D _)
     {
-        destroyBlock();
+        if (tag == "Breakable")
+        {
+            destroyBlock();
+        }
     }
 
     private void destroyBlock()

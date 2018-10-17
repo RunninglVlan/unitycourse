@@ -23,8 +23,8 @@ GameObject:
   - component: {fileID: 61034776877309376}
   - component: {fileID: 114825352626823032}
   m_Layer: 0
-  m_Name: Block
-  m_TagString: Untagged
+  m_Name: Breakable block
+  m_TagString: Breakable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

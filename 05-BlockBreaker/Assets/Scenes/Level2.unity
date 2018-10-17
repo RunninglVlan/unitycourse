@@ -934,7 +934,7 @@ GameObject:
   m_Component:
   - component: {fileID: 634854870}
   m_Layer: 0
-  m_Name: Blocks
+  m_Name: Breakable blocks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2908,6 +2908,11 @@ Prefab:
       propertyPath: paddle
       value: 
       objectReference: {fileID: 1402488755}
+    - target: {fileID: 114481631169699842, guid: 56b5904d291075b4c9db6ad9fb757a1a,
+        type: 2}
+      propertyPath: launchImpulse.y
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56b5904d291075b4c9db6ad9fb757a1a, type: 2}
   m_IsPrefabAsset: 0
