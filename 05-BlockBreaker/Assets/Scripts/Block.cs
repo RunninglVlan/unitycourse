@@ -10,14 +10,12 @@ public class Block : MonoBehaviour
     [SerializeField] Sprite[] hitSprites;
 
     private Level level;
-    private GameSession gameSession;
 
     private int currentHits = 0;
 
     void Start()
     {
         level = FindObjectOfType<Level>();
-        gameSession = FindObjectOfType<GameSession>();
         if (tag == "Breakable")
         {
             level.addBreakableBlock();
@@ -56,7 +54,7 @@ public class Block : MonoBehaviour
     {
         playEffects();
         level.removeBreakableBlock();
-        gameSession.increaseScore();
+        FindObjectOfType<GameSession>().increaseScore();
         Destroy(gameObject);
     }
 

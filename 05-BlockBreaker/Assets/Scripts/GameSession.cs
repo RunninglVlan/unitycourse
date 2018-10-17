@@ -18,8 +18,8 @@ public class GameSession : MonoBehaviour
 
     void Awake()
     {
-        var gameStatuses = FindObjectsOfType<GameSession>().Length;
-        if (gameStatuses > 1)
+        var gameSessions = FindObjectsOfType<GameSession>().Length;
+        if (gameSessions > 1)
         {
             Destroy(gameObject);
         }
