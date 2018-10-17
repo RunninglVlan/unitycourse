@@ -186,11 +186,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paddle: {fileID: 0}
-  launchImpulse: {x: 5, y: 15}
+  launchImpulse: {x: 5, y: 10}
   collisionSounds:
   - {fileID: 8300000, guid: e347ebbac6ba84a4191a9d04ac1be5cb, type: 3}
   - {fileID: 8300000, guid: be296136c2ac3e24aa860b2f8d7fbb5f, type: 3}
   - {fileID: 8300000, guid: fead858cffd20d44f86527dfb3d095bd, type: 3}
+  velocityRandomFactor: 0.5
 --- !u!212 &212196055797940468
 SpriteRenderer:
   m_ObjectHideFlags: 1
