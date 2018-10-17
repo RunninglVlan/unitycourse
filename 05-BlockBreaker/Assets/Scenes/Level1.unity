@@ -1267,15 +1267,25 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 114468747312734782, guid: 498d5a8669f8c1f44b61671e3c5bd1cc,
+    - target: {fileID: 114071545645062724, guid: 498d5a8669f8c1f44b61671e3c5bd1cc,
         type: 2}
-      propertyPath: scoreTextComponent
-      value: 
-      objectReference: {fileID: 1853482184}
-    - target: {fileID: 224669327579942420, guid: 498d5a8669f8c1f44b61671e3c5bd1cc,
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114071545645062724, guid: 498d5a8669f8c1f44b61671e3c5bd1cc,
         type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114705919047372048, guid: 498d5a8669f8c1f44b61671e3c5bd1cc,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114705919047372048, guid: 498d5a8669f8c1f44b61671e3c5bd1cc,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 498d5a8669f8c1f44b61671e3c5bd1cc, type: 2}
@@ -2075,12 +2085,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b29ee7c567f655e47a6bb139515f0df2, type: 2}
   m_IsPrefabAsset: 0
---- !u!114 &1853482184 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114705919047372048, guid: 498d5a8669f8c1f44b61671e3c5bd1cc,
-    type: 2}
-  m_PrefabInternal: {fileID: 886241504}
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
 --- !u!1001 &1900618421
 Prefab:
   m_ObjectHideFlags: 0

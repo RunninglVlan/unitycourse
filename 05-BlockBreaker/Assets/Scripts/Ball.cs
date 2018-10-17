@@ -23,13 +23,20 @@ public class Ball : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D _)
     {
-        var velocityTweak = new Vector2(Random.Range(0, velocityRandomFactor), Random.Range(0, velocityRandomFactor));
+        var velocityTweak = new Vector2(
+            Random.Range(-velocityRandomFactor, velocityRandomFactor),
+            Random.Range(-velocityRandomFactor, velocityRandomFactor));
         if (isLaunched)
         {
             AudioClip sound = collisionSounds[Random.Range(0, collisionSounds.Length)];
             GetComponent<AudioSource>().PlayOneShot(sound);
             rigidbody2D.velocity += velocityTweak;
         }
+    }
+
+    public void resetPosition()
+    {
+        isLaunched = false;
     }
 
     void Update()
@@ -52,7 +59,7 @@ public class Ball : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             isLaunched = true;
-            rigidbody2D.AddForce(launchImpulse, ForceMode2D.Impulse);
+            rigidbody2D.velocity = launchImpulse;
             paddle.GetComponent<AudioSource>().Play();
         }
     }

@@ -10,6 +10,8 @@ public class GameSession : MonoBehaviour
     [SerializeField] float gameSpeed = 1;
     [SerializeField] int pointsForDestroyedBlock = 25;
     [SerializeField] TextMeshProUGUI scoreTextComponent;
+    [SerializeField] int lives = 3;
+    [SerializeField] TextMeshProUGUI livesTextComponent;
 
     private int currentScore = 0;
 
@@ -30,11 +32,31 @@ public class GameSession : MonoBehaviour
     {
         Time.timeScale = gameSpeed;
         showScore();
+        showLives();
     }
 
     public void reset()
     {
         Destroy(gameObject);
+    }
+
+    public void loseLife()
+    {
+        lives--;
+        if (lives > 0)
+        {
+            showLives();
+        }
+    }
+
+    private void showLives()
+    {
+        livesTextComponent.text = (lives - 1).ToString();
+    }
+
+    public bool noMoreLives()
+    {
+        return lives <= 0;
     }
 
     public void increaseScore()
