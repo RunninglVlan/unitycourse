@@ -19,9 +19,20 @@ public class Paddle : MonoBehaviour
 
     void Update()
     {
-        var mousePositionX = Input.mousePosition.x / Screen.width * cameraWidth;
-        var newPositionX = Mathf.Clamp(mousePositionX, 0 + paddleWidth / 2, cameraWidth - paddleWidth / 2);
-        var newPosition = new Vector2(newPositionX, transform.position.y);
-        transform.position = newPosition;
+        transform.position = new Vector2(newPositionX(), transform.position.y);
+    }
+
+    private float newPositionX()
+    {
+        if (FindObjectOfType<GameSession>().isAutoplayEnabled())
+        {
+            return FindObjectOfType<Ball>().transform.position.x;
+        }
+        else
+        {
+            var mousePositionX = Input.mousePosition.x / Screen.width * cameraWidth;
+            var mousePositionXInScene = Mathf.Clamp(mousePositionX, 0 + paddleWidth / 2, cameraWidth - paddleWidth / 2);
+            return mousePositionXInScene;
+        }
     }
 }

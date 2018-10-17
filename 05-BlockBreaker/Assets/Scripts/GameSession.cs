@@ -12,6 +12,7 @@ public class GameSession : MonoBehaviour
     [SerializeField] TextMeshProUGUI scoreTextComponent;
     [SerializeField] int lives = 3;
     [SerializeField] TextMeshProUGUI livesTextComponent;
+    [SerializeField] bool autoplayEnabled = false;
 
     private int currentScore = 0;
 
@@ -57,6 +58,11 @@ public class GameSession : MonoBehaviour
     public bool noMoreLives()
     {
         return lives <= 0;
+    }
+
+    public bool isAutoplayEnabled()
+    {
+        return autoplayEnabled;
     }
 
     public void increaseScore()
