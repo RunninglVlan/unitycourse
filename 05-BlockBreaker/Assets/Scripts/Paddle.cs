@@ -9,12 +9,16 @@ public class Paddle : MonoBehaviour
     [SerializeField] float clipStart = 0.2f;
 
     private float cameraWidth;
+    private GameSession gameSession;
+    private Ball ball;
 
     void Start()
     {
         var camera = Camera.main;
         cameraWidth = camera.orthographicSize * 2 * camera.aspect;
         GetComponent<AudioSource>().time = clipStart;
+        gameSession = FindObjectOfType<GameSession>();
+        ball = FindObjectOfType<Ball>();
     }
 
     void Update()
@@ -24,9 +28,9 @@ public class Paddle : MonoBehaviour
 
     private float newPositionX()
     {
-        if (FindObjectOfType<GameSession>().isAutoplayEnabled())
+        if (gameSession.isAutoplayEnabled())
         {
-            return FindObjectOfType<Ball>().transform.position.x;
+            return ball.transform.position.x;
         }
         else
         {

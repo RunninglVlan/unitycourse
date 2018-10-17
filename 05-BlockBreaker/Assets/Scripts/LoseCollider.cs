@@ -6,9 +6,17 @@ using UnityEngine.SceneManagement;
 public class LoseCollider : MonoBehaviour
 {
 
+    private GameSession gameSession;
+    private Ball ball;
+
+    void Start()
+    {
+        gameSession = FindObjectOfType<GameSession>();
+        ball = FindObjectOfType<Ball>();
+    }
+
     void OnTriggerEnter2D(Collider2D _)
     {
-        var gameSession = FindObjectOfType<GameSession>();
         gameSession.loseLife();
         if (gameSession.noMoreLives())
         {
@@ -16,7 +24,7 @@ public class LoseCollider : MonoBehaviour
         }
         else
         {
-            FindObjectOfType<Ball>().resetPosition();
+            ball.resetPosition();
         }
     }
 

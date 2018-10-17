@@ -7,6 +7,13 @@ public class Level : MonoBehaviour
 
     [SerializeField] int breakableBlocks;
 
+    private SceneLoader sceneLoader;
+
+    void Start()
+    {
+        sceneLoader = FindObjectOfType<SceneLoader>();
+    }
+
     public void addBreakableBlock()
     {
         breakableBlocks++;
@@ -17,7 +24,7 @@ public class Level : MonoBehaviour
         breakableBlocks--;
         if (breakableBlocks <= 0)
         {
-            FindObjectOfType<SceneLoader>().nextScene();
+            sceneLoader.nextScene();
         }
     }
 }
