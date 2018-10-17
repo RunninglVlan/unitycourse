@@ -7,14 +7,11 @@ public class GameSession : MonoBehaviour
 {
 
     [Range(0.1f, 10)]
-    [SerializeField]
-    float gameSpeed = 1;
-    [SerializeField]
-    int pointsForDestroyedBlock = 25;
-    [SerializeField]
-    TextMeshProUGUI scoreTextComponent;
+    [SerializeField] float gameSpeed = 1;
+    [SerializeField] int pointsForDestroyedBlock = 25;
+    [SerializeField] TextMeshProUGUI scoreTextComponent;
 
-    int currentScore = 0;
+    private int currentScore = 0;
 
     void Awake()
     {
