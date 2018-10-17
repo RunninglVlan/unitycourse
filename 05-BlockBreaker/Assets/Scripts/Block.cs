@@ -10,14 +10,12 @@ public class Block : MonoBehaviour
     [SerializeField] Sprite[] hitSprites;
 
     private Level level;
-    private int maxHits;
 
     private int currentHits = 0;
 
     void Start()
     {
         level = FindObjectOfType<Level>();
-        maxHits = hitSprites.Length + 1;
         if (tag == "Breakable")
         {
             level.addBreakableBlock();
@@ -35,6 +33,7 @@ public class Block : MonoBehaviour
     private void hitBlock()
     {
         currentHits++;
+        var maxHits = hitSprites.Length + 1;
         if (currentHits >= maxHits)
         {
             destroyBlock();
