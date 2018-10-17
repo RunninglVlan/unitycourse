@@ -7,15 +7,17 @@ public class Block : MonoBehaviour
 
     [SerializeField] AudioClip breakSound;
     [SerializeField] GameObject sparklesEffect;
-    [SerializeField] int maxHits;
+    [SerializeField] Sprite[] hitSprites;
 
     private Level level;
+    private int maxHits;
 
     private int currentHits = 0;
 
     void Start()
     {
         level = FindObjectOfType<Level>();
+        maxHits = hitSprites.Length + 1;
         if (tag == "Breakable")
         {
             level.addBreakableBlock();
@@ -37,6 +39,16 @@ public class Block : MonoBehaviour
         {
             destroyBlock();
         }
+        else
+        {
+            showNextHitSprite();
+        }
+    }
+
+    private void showNextHitSprite()
+    {
+        var spriteIndex = currentHits - 1;
+        GetComponent<SpriteRenderer>().sprite = hitSprites[spriteIndex];
     }
 
     private void destroyBlock()
