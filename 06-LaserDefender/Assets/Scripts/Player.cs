@@ -19,8 +19,11 @@ public class Player : MonoBehaviour
     private void setUpMovementBoundaries()
     {
         var gameCamera = Camera.main;
+        var padding = new Vector2(playerPadding, playerPadding);
         minBoundary = gameCamera.ViewportToWorldPoint(Vector2.zero);
+        minBoundary += padding;
         maxBoundary = gameCamera.ViewportToWorldPoint(Vector2.one);
+        maxBoundary -= padding;
     }
 
     void Update()
@@ -34,8 +37,8 @@ public class Player : MonoBehaviour
         delta.Normalize();
         delta *= speed * Time.deltaTime;
         var newPosition = transform.position + delta;
-        newPosition.x = Mathf.Clamp(newPosition.x, minBoundary.x + playerPadding, maxBoundary.x - playerPadding);
-        newPosition.y = Mathf.Clamp(newPosition.y, minBoundary.y + playerPadding, maxBoundary.y - playerPadding);
+        newPosition.x = Mathf.Clamp(newPosition.x, minBoundary.x, maxBoundary.x);
+        newPosition.y = Mathf.Clamp(newPosition.y, minBoundary.y, maxBoundary.y);
         transform.position = newPosition;
     }
 }
