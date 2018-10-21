@@ -7,10 +7,8 @@ public class Player : MonoBehaviour
 
     [SerializeField] int speed = 10;
 
-    private float xMin;
-    private float xMax;
-    private float yMin;
-    private float yMax;
+    private Vector2 minBoundary;
+    private Vector2 maxBoundary;
 
     void Start()
     {
@@ -20,10 +18,8 @@ public class Player : MonoBehaviour
     private void setUpMovementBoundaries()
     {
         var gameCamera = Camera.main;
-        xMin = gameCamera.ViewportToWorldPoint(new Vector2(0, 0)).x;
-        xMax = gameCamera.ViewportToWorldPoint(new Vector2(1, 0)).x;
-        yMin = gameCamera.ViewportToWorldPoint(new Vector2(0, 0)).y;
-        yMax = gameCamera.ViewportToWorldPoint(new Vector2(0, 1)).y;
+        minBoundary = gameCamera.ViewportToWorldPoint(Vector2.zero);
+        maxBoundary = gameCamera.ViewportToWorldPoint(Vector2.one);
     }
 
     void Update()
@@ -37,8 +33,8 @@ public class Player : MonoBehaviour
         delta.Normalize();
         delta *= speed * Time.deltaTime;
         var newPosition = transform.position + delta;
-        newPosition.x = Mathf.Clamp(newPosition.x, xMin, xMax);
-        newPosition.y = Mathf.Clamp(newPosition.y, yMin, yMax);
+        newPosition.x = Mathf.Clamp(newPosition.x, minBoundary.x, maxBoundary.x);
+        newPosition.y = Mathf.Clamp(newPosition.y, minBoundary.y, maxBoundary.y);
         transform.position = newPosition;
     }
 }
