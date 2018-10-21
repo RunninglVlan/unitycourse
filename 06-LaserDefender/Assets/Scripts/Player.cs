@@ -14,8 +14,8 @@ public class Player : MonoBehaviour
 
     private void move()
     {
-        var deltaX = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
-        var deltaY = Input.GetAxis("Vertical") * speed * Time.deltaTime;
-        transform.position = new Vector2(transform.position.x + deltaX, transform.position.y + deltaY);
+        var delta = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        delta *= speed * Time.deltaTime;
+        transform.position = new Vector2(transform.position.x + delta.x, transform.position.y + delta.y);
     }
 }
