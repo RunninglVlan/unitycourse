@@ -17,6 +17,7 @@ Cool game I played in school: [Brick Breaker Revolution by _Digital Chocolate_](
 - [Rigidbody 2D](https://docs.unity3d.com/Manual/class-Rigidbody2D.html) for physics simulation
   - [.velocity](https://docs.unity3d.com/ScriptReference/Rigidbody2D-velocity.html) of type [Vector2](https://docs.unity3d.com/ScriptReference/Vector2.html)
 - [Physics Material 2D](https://docs.unity3d.com/Manual/class-PhysicsMaterial2D.html) for controlling friction and bounce of colliders
+- Controlling game object with mouse using `Input.mousePosition.x`
 - [Mathf.Clamp](https://docs.unity3d.com/ScriptReference/Mathf.Clamp.html) for setting lower and upper bounds of the value
 - [Destroy](https://docs.unity3d.com/ScriptReference/Object.Destroy.html) game objects or their components
 - Use [Prefab](https://docs.unity3d.com/Manual/Prefabs.html) as a template for copies of object
