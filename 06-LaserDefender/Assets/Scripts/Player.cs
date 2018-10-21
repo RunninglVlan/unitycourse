@@ -6,7 +6,6 @@ public class Player : MonoBehaviour
 {
 
     [SerializeField] int speed = 10;
-    [SerializeField] float playerPadding = 1;
 
     private Vector2 minBoundary;
     private Vector2 maxBoundary;
@@ -19,11 +18,11 @@ public class Player : MonoBehaviour
     private void setUpMovementBoundaries()
     {
         var gameCamera = Camera.main;
-        var padding = new Vector2(playerPadding, playerPadding);
+        Vector2 extents = GetComponent<Renderer>().bounds.extents;
         minBoundary = gameCamera.ViewportToWorldPoint(Vector2.zero);
-        minBoundary += padding;
+        minBoundary += extents;
         maxBoundary = gameCamera.ViewportToWorldPoint(Vector2.one);
-        maxBoundary -= padding;
+        maxBoundary -= extents;
     }
 
     void Update()
