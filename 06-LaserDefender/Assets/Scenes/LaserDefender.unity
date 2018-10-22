@@ -122,6 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 245239066}
   - component: {fileID: 245239065}
+  - component: {fileID: 245239067}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -182,12 +183,28 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 245239064}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.65, z: 0}
+  m_LocalPosition: {x: 5.27, y: 5.85, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &245239067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 245239064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c282093d5d96d84793fc80741b060c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 4051895592150010, guid: 48b5d79add548c84ea6db4a5e22ffdd0, type: 2}
+  - {fileID: 4508502545888454, guid: 48b5d79add548c84ea6db4a5e22ffdd0, type: 2}
+  - {fileID: 4760044031235618, guid: 48b5d79add548c84ea6db4a5e22ffdd0, type: 2}
+  movementSpeed: 2
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,3 +669,4 @@ MonoBehaviour:
   laserPrefab: {fileID: 1290855491198812, guid: 4ce07f3ce9d34424e88af93f341c2762,
     type: 2}
   laserSpeed: 20
+  firingInterval: 0.1

@@ -8,3 +8,4 @@
   - Some features depend on each other (Not much use from Enemy Health without Player Shooting), some can be grouped (Player Movement and Shooting). Some of the polish areas can be implemented in the middle.
 - [Quaternion](https://docs.unity3d.com/ScriptReference/Quaternion.html)s are used to represent rotations
 - [Coroutines](https://docs.unity3d.com/Manual/Coroutines.html) are like functions that have the ability to pause execution and return control to Unity but then to continue where they left off on the following frame or after specified time
+- [Vector2.MoveTowards](https://docs.unity3d.com/ScriptReference/Vector2.MoveTowards.html)
