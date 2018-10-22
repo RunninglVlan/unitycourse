@@ -5,9 +5,12 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 
+    private const string FIRE = "Fire1";
+
     [SerializeField] int movementSpeed = 10;
     [SerializeField] GameObject laserPrefab;
     [SerializeField] int laserSpeed = 10;
+    [SerializeField] float firingInterval = .1f;
 
     private Vector2 minBoundary;
     private Vector2 maxBoundary;
@@ -46,10 +49,19 @@ public class Player : MonoBehaviour
 
     private void fire()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown(FIRE))
+        {
+            StartCoroutine(keepFiring());
+        }
+    }
+
+    private IEnumerator keepFiring()
+    {
+        while (Input.GetButton(FIRE))
         {
             var laser = Instantiate(laserPrefab, transform.position, Quaternion.identity);
             laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, laserSpeed);
+            yield return new WaitForSeconds(firingInterval);
         }
     }
 }
