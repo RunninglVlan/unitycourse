@@ -6,3 +6,4 @@
 - [Camera.ViewportToWorldPoint(position)](https://docs.unity3d.com/ScriptReference/Camera.ViewportToWorldPoint.html), viewport has (0,0) and (1,1) boundaries
 - Map out all the _core_ and _secondary_ features in the game, and the main _polish_ areas.
   - Some features depend on each other (Not much use from Enemy Health without Player Shooting), some can be grouped (Player Movement and Shooting). Some of the polish areas can be implemented in the middle.
+- [Quaternion](https://docs.unity3d.com/ScriptReference/Quaternion.html)s are used to represent rotations
