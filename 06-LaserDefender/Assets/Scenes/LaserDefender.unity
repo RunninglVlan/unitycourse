@@ -204,7 +204,7 @@ MonoBehaviour:
   - {fileID: 4051895592150010, guid: 48b5d79add548c84ea6db4a5e22ffdd0, type: 2}
   - {fileID: 4508502545888454, guid: 48b5d79add548c84ea6db4a5e22ffdd0, type: 2}
   - {fileID: 4760044031235618, guid: 48b5d79add548c84ea6db4a5e22ffdd0, type: 2}
-  movementSpeed: 2
+  movementSpeed: 4
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
