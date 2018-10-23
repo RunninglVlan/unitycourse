@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [CreateAssetMenu]
@@ -17,12 +18,7 @@ public class WaveConfig : ScriptableObject
     {
         get
         {
-            var points = new List<Transform>();
-            foreach (Transform child in pathPrefab.transform)
-            {
-                points.Add(child);
-            }
-            return points;
+            return pathPrefab.transform.Cast<Transform>().ToList();
         }
     }
 }
