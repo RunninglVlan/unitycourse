@@ -8,8 +8,6 @@ public class EnemySpawner : MonoBehaviour
 
     [SerializeField] List<WaveConfig> waveConfigs = new List<WaveConfig>();
 
-    private bool waveIsSpawning = false;
-
     void Start()
     {
         StartCoroutine(spawnWaves());
@@ -20,9 +18,7 @@ public class EnemySpawner : MonoBehaviour
         for (int waveIndex = 0; waveIndex < waveConfigs.Count; waveIndex++)
         {
             var wave = waveConfigs[waveIndex];
-            waveIsSpawning = true;
-            StartCoroutine(spawnEnemiesIn(wave));
-            yield return new WaitWhile(() => waveIsSpawning);
+            yield return StartCoroutine(spawnEnemiesIn(wave));
         }
     }
 
@@ -35,6 +31,5 @@ public class EnemySpawner : MonoBehaviour
             var randomTimeBetweenSpawns = waveConfig.timeBetweenSpawns + Random.Range(0, waveConfig.spawnRandomFactor);
             yield return new WaitForSeconds(randomTimeBetweenSpawns);
         }
-        waveIsSpawning = false;
     }
 }

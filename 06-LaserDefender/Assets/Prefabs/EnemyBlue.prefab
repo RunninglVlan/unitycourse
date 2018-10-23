@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212643902978820598}
   - component: {fileID: 114887794196360518}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: EnemyBlue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52,7 +52,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c282093d5d96d84793fc80741b060c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveConfig: {fileID: 0}
 --- !u!212 &212643902978820598
 SpriteRenderer:
   m_ObjectHideFlags: 1
