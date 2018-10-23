@@ -23,9 +23,10 @@ GameObject:
   - component: {fileID: 114144432664228708}
   - component: {fileID: 114324442907190214}
   - component: {fileID: 58100582135510400}
+  - component: {fileID: 114908043975417122}
   m_Layer: 0
   m_Name: EnemyBlack
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78,6 +79,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59edd6216845aca4c9dbebca491b396e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserPrefab: {fileID: 1721277149815300, guid: 1451dcdb19a66a84b92ae2a498957198,
+    type: 2}
+  laserSpeed: 6
+  firingMinInterval: 1
+  firingMaxInterval: 2
+--- !u!114 &114908043975417122
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1963422370978674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 516b728df464c7641afc48325339c449, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100

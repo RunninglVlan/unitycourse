@@ -4,22 +4,23 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [SerializeField] GameObject laserPrefab;
+    [SerializeField] int laserSpeed = 10;
+    [SerializeField] float firingMinInterval = .5f;
+    [SerializeField] float firingMaxInterval = 1f;
 
-    [SerializeField] int health = 100;
-
-    void OnTriggerEnter2D(Collider2D other)
+    void Start()
     {
-        var damageDealer = other.GetComponent<DamageDealer>();
-        getHitBy(damageDealer);
+        StartCoroutine(fire());
     }
 
-    private void getHitBy(DamageDealer damageDealer)
+    private IEnumerator fire()
     {
-        health -= damageDealer.damageDealt();
-        if (health <= 0)
+        while (true)
         {
-            Destroy(gameObject);
+            var laser = Instantiate(laserPrefab, transform.position, laserPrefab.transform.rotation);
+            laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -laserSpeed);
+            yield return new WaitForSeconds(Random.Range(firingMinInterval, firingMaxInterval));
         }
-        damageDealer.hit();
     }
 }
