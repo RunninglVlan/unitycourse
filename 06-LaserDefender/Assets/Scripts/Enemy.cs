@@ -10,11 +10,16 @@ public class Enemy : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         var damageDealer = other.GetComponent<DamageDealer>();
-        damageDealer.hit();
+        getHitBy(damageDealer);
+    }
+
+    private void getHitBy(DamageDealer damageDealer)
+    {
         health -= damageDealer.damageDealt();
         if (health <= 0)
         {
             Destroy(gameObject);
         }
+        damageDealer.hit();
     }
 }
