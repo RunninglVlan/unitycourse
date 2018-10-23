@@ -366,27 +366,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1273951032}
-  - component: {fileID: 1273951031}
-  - component: {fileID: 1273951033}
+  - component: {fileID: 1273951034}
   m_Layer: 0
-  m_Name: GameLogic
+  m_Name: EnemySpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1273951031
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1273951030}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c282093d5d96d84793fc80741b060c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waveConfig: {fileID: 11400000, guid: 714ec13605e7ba24089587832a376c60, type: 2}
 --- !u!4 &1273951032
 Transform:
   m_ObjectHideFlags: 0
@@ -400,7 +387,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1273951033
+--- !u!114 &1273951034
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -408,10 +395,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1273951030}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c282093d5d96d84793fc80741b060c7, type: 3}
+  m_Script: {fileID: 11500000, guid: 03ecddf9718c782448f643d1bea73f94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveConfig: {fileID: 11400000, guid: a20c4616703df6c4f89f9cfd817fbdfc, type: 2}
+  waveConfigs:
+  - {fileID: 11400000, guid: 714ec13605e7ba24089587832a376c60, type: 2}
+  - {fileID: 11400000, guid: a20c4616703df6c4f89f9cfd817fbdfc, type: 2}
 --- !u!1 &1559542987
 GameObject:
   m_ObjectHideFlags: 0

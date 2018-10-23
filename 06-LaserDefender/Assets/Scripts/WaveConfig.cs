@@ -14,11 +14,5 @@ public class WaveConfig : ScriptableObject
     [SerializeField] public int numberOfEnemies = 5;
     [SerializeField] public int movementSpeed = 2;
 
-    public List<Transform> waypoints
-    {
-        get
-        {
-            return pathPrefab.transform.Cast<Transform>().ToList();
-        }
-    }
+    public List<Transform> waypoints => pathPrefab.transform.Cast<Transform>().ToList();
 }
