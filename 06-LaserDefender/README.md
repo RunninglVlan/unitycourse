@@ -13,3 +13,4 @@
 - [Transform](https://docs.unity3d.com/ScriptReference/Transform.html) is enumerable
 - [Header](https://docs.unity3d.com/ScriptReference/HeaderAttribute.html) can be added to separate and name inspector properties
   - [Space](https://docs.unity3d.com/ScriptReference/SpaceAttribute.html) just to separate them
+- [Layer-based collision detection](https://docs.unity3d.com/Manual/LayerBasedCollision.html) can be used to control object collisions based on layers they are placed on.

@@ -10,10 +10,7 @@ public class DamageReceiver : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         var damageDealer = other.GetComponent<DamageDealer>();
-        if (tag != damageDealer?.tag)
-        {
-            getHitBy(damageDealer);
-        }
+        getHitBy(damageDealer);
     }
 
     private void getHitBy(DamageDealer damageDealer)
