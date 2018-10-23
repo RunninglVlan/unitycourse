@@ -7,7 +7,10 @@ public class Player : MonoBehaviour
 
     private const string FIRE = "Fire1";
 
+    [Header("Movement")]
     [SerializeField] int movementSpeed = 10;
+
+    [Header("Firing")]
     [SerializeField] GameObject laserPrefab;
     [SerializeField] int laserSpeed = 10;
     [SerializeField] float firingInterval = .1f;

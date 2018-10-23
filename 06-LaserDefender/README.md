@@ -11,3 +11,5 @@
   - You can also `yield return` [Coroutine](https://docs.unity3d.com/ScriptReference/Coroutine.html)
 - [Vector2.MoveTowards](https://docs.unity3d.com/ScriptReference/Vector2.MoveTowards.html)
 - [Transform](https://docs.unity3d.com/ScriptReference/Transform.html) is enumerable
+- [Header](https://docs.unity3d.com/ScriptReference/HeaderAttribute.html) can be added to separate and name inspector properties
+  - [Space](https://docs.unity3d.com/ScriptReference/SpaceAttribute.html) just to separate them
