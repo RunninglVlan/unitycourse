@@ -84,7 +84,7 @@ MonoBehaviour:
   laserPrefab: {fileID: 1721277149815300, guid: 1451dcdb19a66a84b92ae2a498957198,
     type: 2}
   laserSpeed: 6
-  firingMinInterval: 1
+  firingMinInterval: 0.5
   firingMaxInterval: 2
 --- !u!114 &114908043975417122
 MonoBehaviour:

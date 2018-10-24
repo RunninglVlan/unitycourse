@@ -18,9 +18,9 @@ public class Enemy : MonoBehaviour
     {
         while (true)
         {
+            yield return new WaitForSeconds(Random.Range(firingMinInterval, firingMaxInterval));
             var laser = Instantiate(laserPrefab, transform.position, laserPrefab.transform.rotation);
             laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -laserSpeed);
-            yield return new WaitForSeconds(Random.Range(firingMinInterval, firingMaxInterval));
         }
     }
 }
