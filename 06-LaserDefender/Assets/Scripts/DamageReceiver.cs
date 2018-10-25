@@ -10,6 +10,13 @@ public class DamageReceiver : MonoBehaviour
 
     [SerializeField] int health = 100;
 
+    private SoundFxPlayer soundFxPlayer;
+
+    void Start()
+    {
+        soundFxPlayer = FindObjectOfType<SoundFxPlayer>();
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         var damageDealer = other.GetComponent<DamageDealer>();
@@ -23,6 +30,10 @@ public class DamageReceiver : MonoBehaviour
         {
             playVfxAndDestroy();
         }
+        else
+        {
+            soundFxPlayer.damage();
+        }
         damageDealer.hit();
     }
 
@@ -30,6 +41,7 @@ public class DamageReceiver : MonoBehaviour
     {
         var explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         Destroy(explosion, explosionDuration);
+        soundFxPlayer.explosion();
         Destroy(gameObject);
     }
 }

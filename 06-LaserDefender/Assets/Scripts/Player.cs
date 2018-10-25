@@ -15,11 +15,13 @@ public class Player : MonoBehaviour
     [SerializeField] int laserSpeed = 10;
     [SerializeField] float firingInterval = .1f;
 
+    private SoundFxPlayer soundFxPlayer;
     private Vector2 minBoundary;
     private Vector2 maxBoundary;
 
     void Start()
     {
+        soundFxPlayer = FindObjectOfType<SoundFxPlayer>();
         setUpMovementBoundaries();
     }
 
@@ -64,6 +66,7 @@ public class Player : MonoBehaviour
         {
             var laser = Instantiate(laserPrefab, transform.position, Quaternion.identity);
             laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, laserSpeed);
+            soundFxPlayer.playerLaser();
             yield return new WaitForSeconds(firingInterval);
         }
     }

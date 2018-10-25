@@ -9,8 +9,11 @@ public class Enemy : MonoBehaviour
     [SerializeField] float firingMinInterval = .5f;
     [SerializeField] float firingMaxInterval = 1f;
 
+    private SoundFxPlayer soundFxPlayer;
+
     void Start()
     {
+        soundFxPlayer = FindObjectOfType<SoundFxPlayer>();
         StartCoroutine(fire());
     }
 
@@ -21,6 +24,7 @@ public class Enemy : MonoBehaviour
             yield return new WaitForSeconds(Random.Range(firingMinInterval, firingMaxInterval));
             var laser = Instantiate(laserPrefab, transform.position, laserPrefab.transform.rotation);
             laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -laserSpeed);
+            soundFxPlayer.enemyLaser();
         }
     }
 }
