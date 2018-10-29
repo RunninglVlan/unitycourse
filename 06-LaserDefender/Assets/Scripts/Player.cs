@@ -70,4 +70,9 @@ public class Player : MonoBehaviour
             yield return new WaitForSeconds(firingInterval);
         }
     }
+
+    void OnDestroy()
+    {
+        FindObjectOfType<SceneLoader>()?.gameOver();
+    }
 }
