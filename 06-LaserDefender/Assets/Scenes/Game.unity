@@ -441,7 +441,7 @@ GameObject:
   - component: {fileID: 1726485138}
   - component: {fileID: 1726485137}
   - component: {fileID: 1726485136}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Boundaries
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -509,6 +509,7 @@ GameObject:
   - component: {fileID: 1726520398}
   - component: {fileID: 1726520400}
   - component: {fileID: 1726520399}
+  - component: {fileID: 1726520401}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -600,7 +601,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -648,6 +649,26 @@ MonoBehaviour:
     type: 2}
   explosionDuration: 1
   health: 500
+--- !u!50 &1726520401
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1726520395}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &1989765761
 Prefab:
   m_ObjectHideFlags: 0
