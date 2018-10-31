@@ -6,17 +6,17 @@ using TMPro;
 public class ScoreDisplay : MonoBehaviour
 {
 
-    TextMeshProUGUI scoreTextComponent;
+    TextMeshProUGUI textComponent;
     GameSession gameSession;
 
     void Start()
     {
-        scoreTextComponent = GetComponent<TextMeshProUGUI>();
+        textComponent = GetComponent<TextMeshProUGUI>();
         gameSession = FindObjectOfType<GameSession>();
     }
 
     void Update()
     {
-        scoreTextComponent.text = gameSession.score.ToString();
+        textComponent.text = gameSession.score.ToString();
     }
 }
