@@ -6,8 +6,8 @@ using TMPro;
 public class ScoreDisplay : MonoBehaviour
 {
 
-    TextMeshProUGUI textComponent;
-    GameSession gameSession;
+    private TextMeshProUGUI textComponent;
+    private GameSession gameSession;
 
     void Start()
     {

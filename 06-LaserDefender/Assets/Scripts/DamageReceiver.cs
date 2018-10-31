@@ -2,26 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DamageReceiver : MonoBehaviour
+public abstract class DamageReceiver : MonoBehaviour
 {
-
-    const string PLAYER_TAG = "Player";
 
     [SerializeField] GameObject explosionPrefab;
     [SerializeField] float explosionDuration = 1;
 
-    [SerializeField] int health = 100;
+    [SerializeField] protected int health = 100;
 
     private SoundFxPlayer soundFxPlayer;
-    private GameSession gameSession;
-    private HealthDisplay healthDisplay;
 
-    void Start()
+    protected virtual void Start()
     {
         soundFxPlayer = FindObjectOfType<SoundFxPlayer>();
-        gameSession = FindObjectOfType<GameSession>();
-        healthDisplay = FindObjectOfType<HealthDisplay>();
-        showPlayerHealth();
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -36,11 +29,11 @@ public class DamageReceiver : MonoBehaviour
     private void getHitBy(DamageDealer damageDealer)
     {
         health -= damageDealer.damageDealt();
-        showPlayerHealth();
+        onHit();
         if (health <= 0)
         {
             playVfxAndDestroy();
-            increaseScore();
+            onDeath();
         }
         else
         {
@@ -49,13 +42,9 @@ public class DamageReceiver : MonoBehaviour
         damageDealer.hit();
     }
 
-    private void showPlayerHealth()
+    protected virtual void onHit()
     {
-        if (tag != PLAYER_TAG)
-        {
-            return;
-        }
-        healthDisplay.show(health);
+
     }
 
     private void playVfxAndDestroy()
@@ -66,12 +55,8 @@ public class DamageReceiver : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void increaseScore()
+    protected virtual void onDeath()
     {
-        if (tag == PLAYER_TAG)
-        {
-            return;
-        }
-        gameSession.increaseScore();
+
     }
 }

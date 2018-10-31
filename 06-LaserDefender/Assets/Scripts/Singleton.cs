@@ -1,8 +1,9 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
-public class MusicPlayer : MonoBehaviour
+public class Singleton : MonoBehaviour
 {
 
     void Awake()
@@ -12,7 +13,8 @@ public class MusicPlayer : MonoBehaviour
 
     private void ensureSingleton()
     {
-        if (FindObjectsOfType(GetType()).Length > 1)
+        var objectsOfCurrentType = FindObjectsOfType(GetType()).Where(it => it.GetType() == GetType());
+        if (objectsOfCurrentType.Count() > 1)
         {
             Destroy(gameObject);
         }

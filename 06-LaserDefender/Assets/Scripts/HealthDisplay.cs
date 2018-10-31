@@ -6,7 +6,7 @@ using TMPro;
 public class HealthDisplay : MonoBehaviour
 {
 
-    TextMeshProUGUI textComponent;
+    private TextMeshProUGUI textComponent;
 
     void Start()
     {
