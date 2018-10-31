@@ -14,11 +14,14 @@ public class DamageReceiver : MonoBehaviour
 
     private SoundFxPlayer soundFxPlayer;
     private GameSession gameSession;
+    private HealthDisplay healthDisplay;
 
     void Start()
     {
         soundFxPlayer = FindObjectOfType<SoundFxPlayer>();
         gameSession = FindObjectOfType<GameSession>();
+        healthDisplay = FindObjectOfType<HealthDisplay>();
+        showPlayerHealth();
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -33,6 +36,7 @@ public class DamageReceiver : MonoBehaviour
     private void getHitBy(DamageDealer damageDealer)
     {
         health -= damageDealer.damageDealt();
+        showPlayerHealth();
         if (health <= 0)
         {
             playVfxAndDestroy();
@@ -43,6 +47,15 @@ public class DamageReceiver : MonoBehaviour
             soundFxPlayer.damage();
         }
         damageDealer.hit();
+    }
+
+    private void showPlayerHealth()
+    {
+        if (tag != PLAYER_TAG)
+        {
+            return;
+        }
+        healthDisplay.show(health);
     }
 
     private void playVfxAndDestroy()
