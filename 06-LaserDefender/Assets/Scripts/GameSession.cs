@@ -1,13 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 public class GameSession : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI scoreTextComponent;
+    [SerializeField] int pointsForEnemy = 25;
 
-    private int currentScore = 0;
+    public int score { get; private set; } = 0;
 
     void Awake()
     {
@@ -26,13 +25,13 @@ public class GameSession : MonoBehaviour
         }
     }
 
-    void Start()
+    public void increaseScore()
     {
-        showScore();
+        score += pointsForEnemy;
     }
 
-    private void showScore()
+    public void reset()
     {
-        scoreTextComponent.text = currentScore.ToString();
+        Destroy(gameObject);
     }
 }

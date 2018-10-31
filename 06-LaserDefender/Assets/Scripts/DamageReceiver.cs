@@ -5,16 +5,20 @@ using UnityEngine;
 public class DamageReceiver : MonoBehaviour
 {
 
+    const string PLAYER_TAG = "Player";
+
     [SerializeField] GameObject explosionPrefab;
     [SerializeField] float explosionDuration = 1;
 
     [SerializeField] int health = 100;
 
     private SoundFxPlayer soundFxPlayer;
+    private GameSession gameSession;
 
     void Start()
     {
         soundFxPlayer = FindObjectOfType<SoundFxPlayer>();
+        gameSession = FindObjectOfType<GameSession>();
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -32,6 +36,7 @@ public class DamageReceiver : MonoBehaviour
         if (health <= 0)
         {
             playVfxAndDestroy();
+            increaseScore();
         }
         else
         {
@@ -46,5 +51,14 @@ public class DamageReceiver : MonoBehaviour
         Destroy(explosion, explosionDuration);
         soundFxPlayer.explosion();
         Destroy(gameObject);
+    }
+
+    private void increaseScore()
+    {
+        if (tag == PLAYER_TAG)
+        {
+            return;
+        }
+        gameSession.increaseScore();
     }
 }
