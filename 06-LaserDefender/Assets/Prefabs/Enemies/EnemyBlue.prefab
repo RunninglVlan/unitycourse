@@ -87,6 +87,7 @@ MonoBehaviour:
     type: 2}
   explosionDuration: 1
   health: 150
+  pointForEnemy: 50
 --- !u!114 &114649735005074350
 MonoBehaviour:
   m_ObjectHideFlags: 1

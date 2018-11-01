@@ -86,7 +86,8 @@ MonoBehaviour:
   explosionPrefab: {fileID: 1837930301003618, guid: 9115e27d48bc25e46baf0cce735b9fe4,
     type: 2}
   explosionDuration: 1
-  health: 200
+  health: 250
+  pointForEnemy: 100
 --- !u!114 &114648230034641420
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -100,9 +101,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 1721277149815300, guid: 50d76171ef3d2fa45ae80faaf0f8525b,
     type: 2}
-  projectileSpeed: 4
-  firingMinInterval: 0.25
-  firingMaxInterval: 2
+  projectileSpeed: 3
+  firingMinInterval: 0.5
+  firingMaxInterval: 3
 --- !u!114 &114887794196360518
 MonoBehaviour:
   m_ObjectHideFlags: 1

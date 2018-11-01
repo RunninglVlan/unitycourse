@@ -5,6 +5,8 @@ using UnityEngine;
 public class EnemyDamageReceiver : DamageReceiver
 {
 
+    [SerializeField] int pointForEnemy = 25;
+
     private GameSession gameSession;
 
     protected override void Start()
@@ -20,6 +22,6 @@ public class EnemyDamageReceiver : DamageReceiver
 
     private void increaseScore()
     {
-        gameSession.increaseScore();
+        gameSession.increaseScore(pointForEnemy);
     }
 }

@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class GameSession : Singleton
 {
-    [SerializeField] int pointsForEnemy = 25;
 
     public int score { get; private set; } = 0;
 
-    public void increaseScore()
+    public void increaseScore(int points)
     {
-        score += pointsForEnemy;
+        score += points;
     }
 
     public void reset()
