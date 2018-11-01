@@ -9,6 +9,7 @@ public class SoundFxPlayer : MonoBehaviour
     [Range(0, 1)]
     [SerializeField] float playerLaserVolume = .5f;
     [SerializeField] AudioClip enemyLaserSound;
+    [SerializeField] AudioClip enemyBombSound;
     [SerializeField] AudioClip damageSound;
     [SerializeField] AudioClip explosionSound;
     [Range(0, 1)]
@@ -22,6 +23,11 @@ public class SoundFxPlayer : MonoBehaviour
     public void enemyLaser()
     {
         playAtCameraPosition(enemyLaserSound);
+    }
+
+    public void enemyBomb()
+    {
+        playAtCameraPosition(enemyBombSound);
     }
 
     public void damage()

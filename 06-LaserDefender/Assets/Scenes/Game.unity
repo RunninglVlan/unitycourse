@@ -158,6 +158,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 114928895161166198, guid: f7c1b3ad83cd66748a3efb80f3a6c467,
+        type: 2}
+      propertyPath: enemyBombSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 12ce925b70f7ff44ba715b949b9e1a99, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7c1b3ad83cd66748a3efb80f3a6c467, type: 2}
   m_IsPrefabAsset: 0
@@ -1126,7 +1131,7 @@ Prefab:
     - target: {fileID: 224978138480770586, guid: 40d10fc96bcead24c9ce60dbd9e8d005,
         type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114056768470398482, guid: 40d10fc96bcead24c9ce60dbd9e8d005,
         type: 2}

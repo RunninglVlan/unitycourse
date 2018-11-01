@@ -82,9 +82,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59edd6216845aca4c9dbebca491b396e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserPrefab: {fileID: 1721277149815300, guid: 1451dcdb19a66a84b92ae2a498957198,
+  projectilePrefab: {fileID: 1721277149815300, guid: 1451dcdb19a66a84b92ae2a498957198,
     type: 2}
-  laserSpeed: 6
+  projectileSpeed: 6
   firingMinInterval: 0.5
   firingMaxInterval: 2
 --- !u!114 &114501335664187906
