@@ -1,5 +1,5 @@
 # unitycourse
-For C# Unity Developer 2D course
+For [C# Unity Developer 2D course](https://www.udemy.com/unitycourse/)
 
 ## Useful resources
 - Fonts: [Dafont](https://www.dafont.com/)
