@@ -22,6 +22,7 @@ Cool game I played in school: [Brick Breaker Revolution by _Digital Chocolate_](
 - [Destroy](https://docs.unity3d.com/ScriptReference/Object.Destroy.html) game objects or their components
 - Use [Prefab](https://docs.unity3d.com/Manual/Prefabs.html) as a template for copies of object
 - [AudioSource](https://docs.unity3d.com/Manual/class-AudioSource.html) and its [supported audio formats](https://docs.unity3d.com/Manual/AudioFiles.html)
+  - [AudioSource#PlayOneShot](https://docs.unity3d.com/ScriptReference/AudioSource.PlayOneShot.html) for playing any AudioClip on an AudioSource, not just default one, attached through Inspector
   - [AudioSource.PlayClipAtPoint](https://docs.unity3d.com/ScriptReference/AudioSource.PlayClipAtPoint.html) for playing AudioClip at a given position
 - [Time.timeScale](https://docs.unity3d.com/ScriptReference/Time-timeScale.html) for manipulating overall game time - fast/slow
 - [Execution Order of Event Functions](https://docs.unity3d.com/Manual/ExecutionOrder.html)
