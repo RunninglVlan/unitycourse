@@ -33,7 +33,7 @@ public class Keyboard : MonoBehaviour
         }
         if (connectedToTerminal)
         {
-            connectedToTerminal.ReceiveFrameInput(Input.inputString);
+            // connectedToTerminal.ReceiveFrameInput(Input.inputString);
         }
     }
 
