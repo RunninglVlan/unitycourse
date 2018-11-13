@@ -199,16 +199,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 212476591400180412, guid: b118c5f999cb0454780ceb197ab61102,
-        type: 2}
-      propertyPath: m_FlipX
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 212476591400180412, guid: b118c5f999cb0454780ceb197ab61102,
-        type: 2}
-      propertyPath: m_FlipY
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b118c5f999cb0454780ceb197ab61102, type: 2}
   m_IsPrefabAsset: 0
@@ -862,6 +852,11 @@ Prefab:
         type: 2}
       propertyPath: m_MatchWidthOrHeight
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224669327579942420, guid: 498d5a8669f8c1f44b61671e3c5bd1cc,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 498d5a8669f8c1f44b61671e3c5bd1cc, type: 2}
