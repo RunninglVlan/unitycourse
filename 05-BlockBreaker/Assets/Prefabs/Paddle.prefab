@@ -181,6 +181,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   paddleWidth: 2
   clipStart: 0.2
+  playground: {fileID: 212476591400180412, guid: b118c5f999cb0454780ceb197ab61102,
+    type: 2}
 --- !u!212 &212984663670659668
 SpriteRenderer:
   m_ObjectHideFlags: 1

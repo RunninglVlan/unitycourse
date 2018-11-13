@@ -199,6 +199,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 212476591400180412, guid: b118c5f999cb0454780ceb197ab61102,
+        type: 2}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212476591400180412, guid: b118c5f999cb0454780ceb197ab61102,
+        type: 2}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b118c5f999cb0454780ceb197ab61102, type: 2}
   m_IsPrefabAsset: 0
@@ -828,16 +838,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 114071545645062724, guid: 498d5a8669f8c1f44b61671e3c5bd1cc,
-        type: 2}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114071545645062724, guid: 498d5a8669f8c1f44b61671e3c5bd1cc,
-        type: 2}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 114705919047372048, guid: 498d5a8669f8c1f44b61671e3c5bd1cc,
         type: 2}
       propertyPath: m_havePropertiesChanged
@@ -848,20 +848,20 @@ Prefab:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 224669327579942420, guid: 498d5a8669f8c1f44b61671e3c5bd1cc,
+    - target: {fileID: 114071545645062724, guid: 498d5a8669f8c1f44b61671e3c5bd1cc,
         type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114468747312734782, guid: 498d5a8669f8c1f44b61671e3c5bd1cc,
-        type: 2}
-      propertyPath: autoplayEnabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114468747312734782, guid: 498d5a8669f8c1f44b61671e3c5bd1cc,
-        type: 2}
-      propertyPath: gameSpeed
+      propertyPath: m_havePropertiesChanged
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114071545645062724, guid: 498d5a8669f8c1f44b61671e3c5bd1cc,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114709234227776678, guid: 498d5a8669f8c1f44b61671e3c5bd1cc,
+        type: 2}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 498d5a8669f8c1f44b61671e3c5bd1cc, type: 2}

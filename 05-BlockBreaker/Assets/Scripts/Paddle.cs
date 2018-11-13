@@ -4,17 +4,16 @@ using UnityEngine;
 
 public class Paddle : MonoBehaviour
 {
-
     [SerializeField] int paddleWidth = 2;
     [SerializeField] float clipStart = 0.2f;
+    [SerializeField] SpriteRenderer playground;
 
-    private float cameraWidth;
+    private float playgroundWidth;
     private Ball ball;
 
     void Start()
     {
-        var camera = Camera.main;
-        cameraWidth = camera.orthographicSize * 2 * camera.aspect;
+        playgroundWidth = playground.bounds.max.x;
         GetComponent<AudioSource>().time = clipStart;
         ball = FindObjectOfType<Ball>();
     }
@@ -32,8 +31,9 @@ public class Paddle : MonoBehaviour
         }
         else
         {
-            var mousePositionX = Input.mousePosition.x / Screen.width * cameraWidth;
-            var mousePositionXInScene = Mathf.Clamp(mousePositionX, 0 + paddleWidth / 2, cameraWidth - paddleWidth / 2);
+            var mousePositionX = Input.mousePosition.x / Screen.width * playgroundWidth;
+            var paddleExtent = paddleWidth / 2;
+            var mousePositionXInScene = Mathf.Clamp(mousePositionX, 0 + paddleExtent, playgroundWidth - paddleExtent);
             return mousePositionXInScene;
         }
     }
