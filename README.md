@@ -4,6 +4,7 @@ For [C# Unity Developer 2D course](https://www.udemy.com/unitycourse/)
 ## WebGL builds
 2. [NumberWizard (Console)](https://runninglvlan.github.io/unitycourse/02-NumberWizard/)
 3. [Text101](https://runninglvlan.github.io/unitycourse/03-Text101/)
+4. [NumberWizardUI](https://runninglvlan.github.io/unitycourse/04-NumberWizardUI/)
 
 ## Useful resources
 - Fonts: [Dafont](https://www.dafont.com/)
