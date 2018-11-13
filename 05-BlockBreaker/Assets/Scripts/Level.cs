@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class Level : MonoBehaviour
 {
-
-    [SerializeField] int breakableBlocks;
-
     private SceneLoader sceneLoader;
+    private int breakableBlocks;
 
     void Start()
     {

@@ -15,6 +15,7 @@ public class GameSession : MonoBehaviour
     [SerializeField] bool autoplayEnabled = false;
 
     private int currentScore = 0;
+    private Cheat autoplayCheat = new Cheat("autoplay");
 
     void Awake()
     {
@@ -34,6 +35,11 @@ public class GameSession : MonoBehaviour
         Time.timeScale = gameSpeed;
         showScore();
         showLives();
+    }
+
+    void Update()
+    {
+        autoplayCheat.ifEntered(() => autoplayEnabled = !autoplayEnabled);
     }
 
     public void reset()
