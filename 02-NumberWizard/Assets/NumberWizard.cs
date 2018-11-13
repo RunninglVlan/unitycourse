@@ -28,12 +28,12 @@ class NumberWizard : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            min = guess;
+            min = guess + 1;
             nextGuess();
         }
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            max = guess;
+            max = guess - 1;
             nextGuess();
         }
         else if (Input.GetKeyDown(KeyCode.Return))
@@ -44,6 +44,12 @@ class NumberWizard : MonoBehaviour
 
     private void nextGuess()
     {
+        if (max == min)
+        {
+            guess = min;
+            printAnswer();
+            return;
+        }
         int previousGuess = guess;
         for (int i = 0; i < max - min; i++)
         {
@@ -55,7 +61,6 @@ class NumberWizard : MonoBehaviour
                 return;
             }
         }
-        printAnswer();
     }
 
     private void printQuestion()

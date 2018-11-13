@@ -3,14 +3,10 @@ using TMPro;
 
 class NumberWizard : MonoBehaviour
 {
+    [SerializeField] int max;
+    [SerializeField] int min;
 
-    [SerializeField]
-    int max;
-    [SerializeField]
-    int min;
-
-    [SerializeField]
-    TextMeshProUGUI guessTextComponent;
+    [SerializeField] TextMeshProUGUI guessTextComponent;
 
     private int guess;
 
