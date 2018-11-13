@@ -27,8 +27,7 @@ public class Keyboard : MonoBehaviour
 
     private void Update()
     {
-        bool isValidKey = Input.inputString.Length > 0;
-        if (isValidKey)
+        if (Input.anyKeyDown)
         {
             PlayRandomSound();
         }

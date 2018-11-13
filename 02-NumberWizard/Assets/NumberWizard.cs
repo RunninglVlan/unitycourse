@@ -60,7 +60,7 @@ class NumberWizard : MonoBehaviour
 
     private void printQuestion()
     {
-        Terminal.WriteLine($"Is your number higher [↑] or lower [↓]than {guess}? Maybe it is equal [⏎]?");
+        Terminal.WriteLine($"Is your number higher [↑] or lower [↓]than {guess}? Maybe it is equal [↵]?");
     }
 
     private void printAnswer()
