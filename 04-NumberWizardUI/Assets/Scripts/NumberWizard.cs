@@ -29,6 +29,11 @@ class NumberWizard : MonoBehaviour
 
     private void nextGuess()
     {
+        if (max == min)
+        {
+            setGuess(min);
+            return;
+        }
         int previousGuess = guess;
         for (int i = 0; i < max - min; i++)
         {
