@@ -5,18 +5,15 @@ using UnityEngine.UI;
 
 public class AdventureGame : MonoBehaviour
 {
-
-    [SerializeField]
-    Text textComponent;
-    [SerializeField]
-    State startingState;
+    [SerializeField] Image textBackground;
+    [SerializeField] Text textComponent;
+    [SerializeField] State startingState;
 
     State state;
 
     void Start()
     {
-        state = startingState;
-        textComponent.text = state.getStoryText();
+        setState(startingState);
     }
 
     void Update()
@@ -31,15 +28,22 @@ public class AdventureGame : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Alpha1 + index))
             {
-                state = nextStates[index];
+                setState(nextStates[index]);
             }
         }
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            state = startingState;
+            setState(startingState);
         }
+    }
 
+    void setState(State state)
+    {
+        this.state = state;
+        Color color;
+        ColorUtility.TryParseHtmlString(state.getColor(), out color);
+        textBackground.color = color;
         textComponent.text = state.getStoryText();
     }
 }

@@ -1302,6 +1302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ea333237bb992e49af56483a90397e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textBackground: {fileID: 960405164}
   textComponent: {fileID: 1246899650}
   startingState: {fileID: 11400000, guid: e343a075058177a4c957f91696c2c14b, type: 2}
 --- !u!4 &1083367962
@@ -1579,7 +1580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9490196, g: 0.75686276, b: 0.18039216, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
