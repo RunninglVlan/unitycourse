@@ -2,7 +2,6 @@
 
 class NumberWizard : MonoBehaviour
 {
-
     private const int MAX = 1000;
     private const int MIN = 0;
 
@@ -15,15 +14,14 @@ class NumberWizard : MonoBehaviour
         max = MAX;
         min = MIN;
 
-        print("Welcome to Number Wizard");
-        print("Pick a number, don't tell me what it is...");
+        Terminal.WriteLine("Welcome to Number Wizard");
+        Terminal.WriteLine();
+        Terminal.WriteLine("Pick a number, don't tell me what it  is...");
 
-        print($"The highest number you can pick is {MAX}");
-        print($"The lowest number you can pick is {MIN}");
+        Terminal.WriteLine($"Lowest and highest possible numbers   are {MIN} and {MAX}");
 
         nextGuess();
-        printQuestion();
-        print("Press UP arrow for higher, DOWN arrow for lower, ENTER for equal");
+        Terminal.WriteLine("Press UP arrow for higher, DOWN arrow for lower, ENTER for equal");
     }
 
     void Update()
@@ -32,23 +30,16 @@ class NumberWizard : MonoBehaviour
         {
             min = guess;
             nextGuess();
-            printQuestion();
         }
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             max = guess;
             nextGuess();
-            printQuestion();
         }
         else if (Input.GetKeyDown(KeyCode.Return))
         {
             printAnswer();
         }
-    }
-
-    private void printQuestion()
-    {
-        print($"Is the number higher [↑] or lower [↓] than {guess}? Maybe it is equal [⏎]?");
     }
 
     private void nextGuess()
@@ -60,15 +51,23 @@ class NumberWizard : MonoBehaviour
             if (previousGuess != nextGuess)
             {
                 guess = nextGuess;
+                printQuestion();
                 return;
             }
         }
         printAnswer();
     }
 
+    private void printQuestion()
+    {
+        Terminal.WriteLine($"Is your number higher [↑] or lower [↓]than {guess}? Maybe it is equal [⏎]?");
+    }
+
     private void printAnswer()
     {
-        print($"You picked {guess}");
+        Terminal.ClearScreen();
+        Terminal.WriteLine($"You picked {guess}");
+        Terminal.WriteLine();
         Start();
     }
 }
