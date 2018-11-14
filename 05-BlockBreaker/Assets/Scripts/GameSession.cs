@@ -16,6 +16,7 @@ public class GameSession : MonoBehaviour
 
     private int currentScore = 0;
     private Cheat autoplayCheat = new Cheat("autoplay");
+    private Cheat fastCheat = new Cheat("fast");
 
     void Awake()
     {
@@ -39,7 +40,12 @@ public class GameSession : MonoBehaviour
 
     void Update()
     {
-        autoplayCheat.ifEntered(() => autoplayEnabled = !autoplayEnabled);
+        autoplayCheat.ifEntered(_ => autoplayEnabled = !autoplayEnabled);
+        fastCheat.ifEntered(enabled =>
+        {
+            gameSpeed = enabled ? 5 : 1;
+            Time.timeScale = gameSpeed;
+        });
     }
 
     public void reset()
