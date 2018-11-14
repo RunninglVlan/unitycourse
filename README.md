@@ -6,6 +6,7 @@ For [C# Unity Developer 2D course](https://www.udemy.com/unitycourse/)
 3. [Text101](https://runninglvlan.github.io/unitycourse/03-Text101/)
 4. [NumberWizardUI](https://runninglvlan.github.io/unitycourse/04-NumberWizardUI/)
 5. [BlockBreaker](https://runninglvlan.github.io/unitycourse/05-BlockBreaker/)
+6. [LaserDefender](https://runninglvlan.github.io/unitycourse/06-LaserDefender/)
 
 ## Useful resources
 - Fonts: [Dafont](https://www.dafont.com/)
