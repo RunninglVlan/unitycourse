@@ -132,6 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1f14137c3b3f8745beb16f5e2351b8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playground: {fileID: 4134443511513648, guid: fd39e82a31f6147478f6b3b00208d67a, type: 2}
   movementSpeed: 10
   laserPrefab: {fileID: 1290855491198812, guid: 4ce07f3ce9d34424e88af93f341c2762,
     type: 2}

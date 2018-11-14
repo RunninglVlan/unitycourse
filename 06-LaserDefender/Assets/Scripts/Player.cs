@@ -7,6 +7,8 @@ public class Player : MonoBehaviour
 
     private const string FIRE = "Fire1";
 
+    [SerializeField] Transform playground;
+
     [Header("Movement")]
     [SerializeField] int movementSpeed = 10;
 
@@ -30,8 +32,10 @@ public class Player : MonoBehaviour
         var gameCamera = Camera.main;
         Vector2 extents = GetComponent<Renderer>().bounds.extents;
         minBoundary = gameCamera.ViewportToWorldPoint(Vector2.zero);
+        minBoundary.x = -playground.localScale.x / 2;
         minBoundary += extents;
         maxBoundary = gameCamera.ViewportToWorldPoint(Vector2.one);
+        maxBoundary.x = playground.localScale.x / 2;
         maxBoundary -= extents;
     }
 
