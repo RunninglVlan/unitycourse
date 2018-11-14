@@ -1188,6 +1188,21 @@ Prefab:
       propertyPath: m_SizeDelta.x
       value: 550
       objectReference: {fileID: 0}
+    - target: {fileID: 114681794581753662, guid: 40d10fc96bcead24c9ce60dbd9e8d005,
+        type: 2}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114681794581753662, guid: 40d10fc96bcead24c9ce60dbd9e8d005,
+        type: 2}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 114681794581753662, guid: 40d10fc96bcead24c9ce60dbd9e8d005,
+        type: 2}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40d10fc96bcead24c9ce60dbd9e8d005, type: 2}
   m_IsPrefabAsset: 0
