@@ -23,6 +23,7 @@ public class GameSession : MonoBehaviour
         var gameSessions = FindObjectsOfType<GameSession>().Length;
         if (gameSessions > 1)
         {
+            gameObject.SetActive(false);
             Destroy(gameObject);
         }
         else

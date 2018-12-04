@@ -8,7 +8,7 @@ public class Terminal : MonoBehaviour
 
     static Terminal primaryTerminal;
 
-    private void Awake()
+    void Awake()
     {
         if (primaryTerminal == null) { primaryTerminal = this; } // Be the one
         inputBuffer = new InputBuffer();
