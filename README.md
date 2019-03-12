@@ -2,11 +2,10 @@
 For [C# Unity Developer 2D course](https://www.udemy.com/unitycourse/)
 
 ## WebGL builds
-2. [NumberWizard (Console)](https://runninglvlan.github.io/unitycourse/02-NumberWizard/)
-3. [Text101](https://runninglvlan.github.io/unitycourse/03-Text101/)
-4. [NumberWizardUI](https://runninglvlan.github.io/unitycourse/04-NumberWizardUI/)
-5. [BlockBreaker](https://runninglvlan.github.io/unitycourse/05-BlockBreaker/)
-6. [LaserDefender](https://runninglvlan.github.io/unitycourse/06-LaserDefender/)
+&nbsp; | &nbsp; | &nbsp;
+--- | --- | ---
+[![NumberWizard (Console)](/docs/02-NumberWizard/thumbnail.png)](https://runninglvlan.github.io/unitycourse/02-NumberWizard/)<br>2. NumberWizard (Console) | [![Text101](/docs/03-Text101/thumbnail.png)](https://runninglvlan.github.io/unitycourse/03-Text101/)<br>3. Text101 | [![NumberWizardUI](/docs/04-NumberWizardUI/thumbnail.png)](https://runninglvlan.github.io/unitycourse/04-NumberWizardUI/)<br>4. NumberWizardUI
+[![BlockBreaker](/docs/05-BlockBreaker/thumbnail.png)](https://runninglvlan.github.io/unitycourse/05-BlockBreaker/)<br>5. BlockBreaker | [![LaserDefender](/docs/06-LaserDefender/thumbnail.png)](https://runninglvlan.github.io/unitycourse/06-LaserDefender/)<br>6. LaserDefender | 
 
 ## Useful resources
 - Fonts: [Dafont](https://www.dafont.com/)
