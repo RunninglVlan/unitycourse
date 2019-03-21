@@ -1,4 +1,7 @@
 # Notes
+## Section 3
+Text101: [Lecture 17](https://www.udemy.com/unitycourse/learn/v4/t/lecture/10562756) - [Lecture 32](https://www.udemy.com/unitycourse/learn/v4/t/lecture/10895626)
+
 ## What's new
 - Playing with [Sprites](https://docs.unity3d.com/Manual/Sprites.html)
 - Create game menu with [Canvas](https://docs.unity3d.com/Manual/UICanvas.html) using buttons and texts

@@ -1,4 +1,7 @@
 # Notes
+## Section 5
+Block Breaker: [Lecture 45](https://www.udemy.com/unitycourse/learn/v4/t/lecture/10852654) - [Lecture 83](https://www.udemy.com/unitycourse/learn/v4/t/lecture/12340118)
+
 ## Game genre references
 Article on the theme: [Gamasutra's _Breaking Down Breakout: System And Level Design For Breakout-style Games_
 ](https://www.gamasutra.com/view/feature/1630/breaking_down_breakout_system_and_.php). Mentioned games with interesting features:

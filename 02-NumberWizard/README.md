@@ -1,4 +1,7 @@
 # Notes
+## Section 2
+Number Wizard - Basic C# Coding: [Lecture 7](https://www.udemy.com/unitycourse/learn/v4/t/lecture/10469524) - [Lecture 16](https://www.udemy.com/unitycourse/learn/v4/t/lecture/13406136)
+
 ## What's new
 - [MonoBehaviour](https://docs.unity3d.com/ScriptReference/MonoBehaviour.html) - base class for Unity scripts
 - [Input](https://docs.unity3d.com/ScriptReference/Input.html).GetKeyDown([KeyCode](https://docs.unity3d.com/ScriptReference/KeyCode.html))

@@ -1,4 +1,7 @@
 # Notes
+## Section 6
+Laser Defender: [Lecture 84](https://www.udemy.com/unitycourse/learn/v4/t/lecture/11408002) - [Lecture 118](https://www.udemy.com/unitycourse/learn/v4/t/lecture/11736012)
+
 ## What's new
 - [Input Manager](https://docs.unity3d.com/Manual/class-InputManager.html) has predefined input axes, e.g. Horizontal for X axis with LeftArrow and A as negative buttons
   - [Input.GetAxis(axisName)](https://docs.unity3d.com/ScriptReference/Input.GetAxis.html)
