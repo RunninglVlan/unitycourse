@@ -5,8 +5,6 @@ For [C# Unity Developer 2D course](https://www.udemy.com/unitycourse/)
 <table>
   <tr>
     <td><a href="https://runninglvlan.github.io/unitycourse/02-DeliveryDriver/"><img src="/docs/02-DeliveryDriver/thumbnail.png" /></a><br>2. Delivery Driver</td>
-    <td></td>
-    <td></td>
   </tr>
 </table>
 
