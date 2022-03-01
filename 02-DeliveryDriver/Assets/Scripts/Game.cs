@@ -8,7 +8,7 @@ public class Game : MonoBehaviour {
 
     void CheckGameOver(Vector3 _) {
         if (--packagesToDeliver <= 0) {
-            Debug.Log("You've delivered all the packages");
+            Debug.Log("Work's done for today. You've delivered all the packages!");
         }
     }
 }
