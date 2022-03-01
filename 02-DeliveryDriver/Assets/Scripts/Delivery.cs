@@ -2,7 +2,8 @@ using System;
 using UnityEngine;
 
 public class Delivery : MonoBehaviour {
-    public event Action<Vector3> Happened = delegate { };
+    public event Action<Vector3> PackagePickedUp = delegate { };
+    public event Action<Vector3> PackageDelivered = delegate { };
 
     bool hasPackage;
 
@@ -15,12 +16,13 @@ public class Delivery : MonoBehaviour {
             case false when trigger.CompareTag("Package"):
                 Debug.Log("Picked up the package");
                 Destroy(trigger.gameObject);
+                PackagePickedUp(trigger.transform.position);
                 hasPackage = true;
                 break;
             case true when trigger.CompareTag("Customer"):
                 Debug.Log("Delivered package to the customer");
                 Destroy(trigger.gameObject);
-                Happened(trigger.transform.position);
+                PackageDelivered(trigger.transform.position);
                 hasPackage = false;
                 break;
         }

@@ -4,7 +4,7 @@ public class Game : MonoBehaviour {
     [SerializeField] int packagesToDeliver = 3;
     [SerializeField] Delivery delivery = null!;
 
-    void Awake() => delivery.Happened += CheckGameOver;
+    void Awake() => delivery.PackageDelivered += CheckGameOver;
 
     void CheckGameOver(Vector3 _) {
         if (--packagesToDeliver <= 0) {
