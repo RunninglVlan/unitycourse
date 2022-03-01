@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Game : MonoBehaviour {
     [SerializeField] int packagesToDeliver = 3;
-    [SerializeField] Delivery delivery;
+    [SerializeField] Delivery delivery = null!;
 
     void Awake() => delivery.Happened += CheckGameOver;
 

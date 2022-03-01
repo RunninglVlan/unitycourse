@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 public class TargetFollower : MonoBehaviour {
-    [SerializeField] Transform target;
+    [SerializeField] Transform target = null!;
     [SerializeField] Vector3 shift;
 
     void LateUpdate() {

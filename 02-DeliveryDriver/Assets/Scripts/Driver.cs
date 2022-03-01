@@ -4,7 +4,7 @@ public class Driver : MonoBehaviour {
     [SerializeField] int steerSpeed = 20;
     [SerializeField] int moveSpeed = 2;
 
-    Controls controls;
+    Controls controls = null!;
 
     void Awake() => controls = new Controls();
     void OnEnable() => controls.Enable();

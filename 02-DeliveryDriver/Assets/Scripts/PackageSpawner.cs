@@ -2,10 +2,10 @@
 using Random = UnityEngine.Random;
 
 public class PackageSpawner : MonoBehaviour {
-    [SerializeField] Transform[] points;
-    [SerializeField] SpriteRenderer packageTemplate;
-    [SerializeField] SpriteRenderer customerTemplate;
-    [SerializeField] Delivery delivery;
+    [SerializeField] Transform[] points = null!;
+    [SerializeField] SpriteRenderer packageTemplate = null!;
+    [SerializeField] SpriteRenderer customerTemplate = null!;
+    [SerializeField] Delivery delivery = null!;
 
     void Awake() {
         delivery.Happened += OnPackageDelivered;
