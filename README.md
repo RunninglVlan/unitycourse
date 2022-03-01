@@ -1,16 +1,16 @@
 # unitycourse
 For [C# Unity Developer 2D course](https://www.udemy.com/unitycourse/)
 
-## WebGL builds
+## Old course WebGL builds
 <table>
   <tr>
-    <td><a href="https://runninglvlan.github.io/unitycourse/02-NumberWizard/"><img src="/docs/02-NumberWizard/thumbnail.png" /></a><br>2. NumberWizard (Console)</td>
-    <td><a href="https://runninglvlan.github.io/unitycourse/03-Text101/"><img src="/docs/03-Text101/thumbnail.png" /></a><br>3. Text101</td>
-    <td><a href="https://runninglvlan.github.io/unitycourse/04-NumberWizardUI/"><img src="/docs/04-NumberWizardUI/thumbnail.png" /></a><br>4. NumberWizardUI</td>
+    <td><a href="https://runninglvlan.github.io/unitycourse/old-02-NumberWizard/"><img src="/docs/old-02-NumberWizard/thumbnail.png" /></a><br>2. NumberWizard (Console)</td>
+    <td><a href="https://runninglvlan.github.io/unitycourse/old-03-Text101/"><img src="/docs/old-03-Text101/thumbnail.png" /></a><br>3. Text101</td>
+    <td><a href="https://runninglvlan.github.io/unitycourse/old-04-NumberWizardUI/"><img src="/docs/old-04-NumberWizardUI/thumbnail.png" /></a><br>4. NumberWizardUI</td>
   </tr>
   <tr>
-    <td><a href="https://runninglvlan.github.io/unitycourse/05-BlockBreaker/"><img src="/docs/05-BlockBreaker/thumbnail.png" /></a><br>5. BlockBreaker</td>
-    <td><a href="https://runninglvlan.github.io/unitycourse/06-LaserDefender/"><img src="/docs/06-LaserDefender/thumbnail.png" /></a><br>6. LaserDefender</td>
+    <td><a href="https://runninglvlan.github.io/unitycourse/old-05-BlockBreaker/"><img src="/docs/old-05-BlockBreaker/thumbnail.png" /></a><br>5. BlockBreaker</td>
+    <td><a href="https://runninglvlan.github.io/unitycourse/old-06-LaserDefender/"><img src="/docs/old-06-LaserDefender/thumbnail.png" /></a><br>6. LaserDefender</td>
     <td></td>
   </tr>
 </table>
