@@ -1,9 +1,9 @@
 {
 "companyName": "DefaultCompany",
 "productName": "old-05-BlockBreaker",
-"dataUrl": "old-05-BlockBreaker.data.unityweb",
-"wasmCodeUrl": "old-05-BlockBreaker.wasm.code.unityweb",
-"wasmFrameworkUrl": "old-05-BlockBreaker.wasm.framework.unityweb",
+"dataUrl": "05-BlockBreaker.data.unityweb",
+"wasmCodeUrl": "05-BlockBreaker.wasm.code.unityweb",
+"wasmFrameworkUrl": "05-BlockBreaker.wasm.framework.unityweb",
 "TOTAL_MEMORY": 268435456,
 "graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
 "webglContextAttributes": {"preserveDrawingBuffer": false},

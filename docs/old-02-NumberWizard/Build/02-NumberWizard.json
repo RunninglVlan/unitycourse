@@ -1,9 +1,9 @@
 {
 "companyName": "DefaultCompany",
 "productName": "old-02-NumberWizard",
-"dataUrl": "old-02-NumberWizard.data.unityweb",
-"wasmCodeUrl": "old-02-NumberWizard.wasm.code.unityweb",
-"wasmFrameworkUrl": "old-02-NumberWizard.wasm.framework.unityweb",
+"dataUrl": "02-NumberWizard.data.unityweb",
+"wasmCodeUrl": "02-NumberWizard.wasm.code.unityweb",
+"wasmFrameworkUrl": "02-NumberWizard.wasm.framework.unityweb",
 "TOTAL_MEMORY": 268435456,
 "graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
 "webglContextAttributes": {"preserveDrawingBuffer": false},

@@ -1,9 +1,9 @@
 {
 "companyName": "DefaultCompany",
 "productName": "old-06-LaserDefender",
-"dataUrl": "old-06-LaserDefender.data.unityweb",
-"wasmCodeUrl": "old-06-LaserDefender.wasm.code.unityweb",
-"wasmFrameworkUrl": "old-06-LaserDefender.wasm.framework.unityweb",
+"dataUrl": "06-LaserDefender.data.unityweb",
+"wasmCodeUrl": "06-LaserDefender.wasm.code.unityweb",
+"wasmFrameworkUrl": "06-LaserDefender.wasm.framework.unityweb",
 "TOTAL_MEMORY": 268435456,
 "graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
 "webglContextAttributes": {"preserveDrawingBuffer": false},

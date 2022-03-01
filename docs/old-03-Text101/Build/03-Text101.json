@@ -1,9 +1,9 @@
 {
 "companyName": "DefaultCompany",
 "productName": "old-03-Text101",
-"dataUrl": "old-03-Text101.data.unityweb",
-"wasmCodeUrl": "old-03-Text101.wasm.code.unityweb",
-"wasmFrameworkUrl": "old-03-Text101.wasm.framework.unityweb",
+"dataUrl": "03-Text101.data.unityweb",
+"wasmCodeUrl": "03-Text101.wasm.code.unityweb",
+"wasmFrameworkUrl": "03-Text101.wasm.framework.unityweb",
 "TOTAL_MEMORY": 268435456,
 "graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
 "webglContextAttributes": {"preserveDrawingBuffer": false},
