@@ -33,12 +33,12 @@ public class PackageSpawner : MonoBehaviour {
         var color = Random.ColorHSV();
         PlaceInstance(packageTemplate, packagePosition, color);
         PlaceInstance(customerTemplate, customerPosition, color);
-    }
 
-    static void PlaceInstance(SpriteRenderer template, Vector3 position, Color color) {
-        var instance = Instantiate(template, position, Quaternion.identity);
-        instance.color = color;
-        instance.gameObject.SetActive(true);
+        static void PlaceInstance(SpriteRenderer template, Vector3 position, Color color) {
+            var instance = Instantiate(template, position, Quaternion.identity);
+            instance.color = color;
+            instance.gameObject.SetActive(true);
+        }
     }
 
     void OnPackagePickedUp(Vector3 packagePosition) {
