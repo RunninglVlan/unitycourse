@@ -2,23 +2,38 @@ using System;
 using UnityEngine;
 
 public class Delivery : MonoBehaviour {
+    [SerializeField] Vector3 packagePosition;
+    [SerializeField] Vector3 packageScale;
+
     public event Action<Vector3> PackagePickedUp = delegate { };
     public event Action<Vector3> PackageDelivered = delegate { };
 
-    bool hasPackage;
+    SpriteRenderer? package;
+
+    void Awake() => package = null;
 
     void OnTriggerEnter2D(Collider2D trigger) {
-        switch (hasPackage) {
-            case false when trigger.CompareTag("Package"):
-                Destroy(trigger.gameObject);
+        switch (package) {
+            case null when trigger.CompareTag("Package"):
+                PlacePackage(trigger);
                 PackagePickedUp(trigger.transform.position);
-                hasPackage = true;
                 break;
-            case true when trigger.CompareTag("Customer"):
+            case not null when trigger.CompareTag("Customer"):
+                Destroy(package!.gameObject);
+                package = null;
                 Destroy(trigger.gameObject);
                 PackageDelivered(trigger.transform.position);
-                hasPackage = false;
                 break;
+        }
+
+        void PlacePackage(Collider2D newPackage) {
+            package = newPackage.GetComponent<SpriteRenderer>();
+            var packageTransform = package.transform;
+            packageTransform.parent = transform;
+            packageTransform.localPosition = packagePosition;
+            packageTransform.localRotation = Quaternion.identity;
+            packageTransform.localScale = packageScale;
+            package.sortingOrder = 3;
         }
     }
 }
