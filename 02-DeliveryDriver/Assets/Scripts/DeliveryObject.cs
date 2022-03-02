@@ -4,7 +4,7 @@ using UnityEngine;
 public class DeliveryObject : MonoBehaviour {
     [SerializeField] SpriteRenderer spriteRenderer = null!;
 
-    public Guid Key { get; set; }
+    public DeliveryObject Customer { get; set; }
 
     public Color Color {
         set => spriteRenderer.color = value;

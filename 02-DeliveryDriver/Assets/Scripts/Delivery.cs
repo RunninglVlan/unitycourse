@@ -20,7 +20,7 @@ public class Delivery : MonoBehaviour {
                 break;
             case not null when trigger.CompareTag("Customer"):
                 var customer = trigger.GetComponent<DeliveryObject>();
-                if (customer.Key != package.Key) {
+                if (customer != package.Customer) {
                     return;
                 }
                 Destroy(package!.gameObject);

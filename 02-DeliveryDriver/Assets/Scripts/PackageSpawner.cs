@@ -31,16 +31,16 @@ public class PackageSpawner : MonoBehaviour {
     void SpawnPackageAndCustomer() {
         var packagePosition = RandomPosition();
         var customerPosition = RandomPosition();
-        var key = Guid.NewGuid();
         var color = Random.ColorHSV();
-        PlaceInstance(packageTemplate, packagePosition);
-        PlaceInstance(customerTemplate, customerPosition);
+        var package = PlaceInstance(packageTemplate, packagePosition);
+        var customer = PlaceInstance(customerTemplate, customerPosition);
+        package.Customer = customer;
 
-        void PlaceInstance(DeliveryObject template, Vector3 position) {
+        DeliveryObject PlaceInstance(DeliveryObject template, Vector3 position) {
             var instance = Instantiate(template, position, Quaternion.identity);
-            instance.Key = key;
             instance.Color = color;
             instance.gameObject.SetActive(true);
+            return instance;
         }
     }
 
