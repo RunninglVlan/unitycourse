@@ -15,8 +15,8 @@ public class Delivery : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D trigger) {
         switch (package) {
             case null when trigger.CompareTag("Package"):
-                PlacePackage(trigger);
                 PackagePickedUp(trigger.transform.position);
+                PlacePackage(trigger);
                 break;
             case not null when trigger.CompareTag("Customer"):
                 Destroy(package!.gameObject);
