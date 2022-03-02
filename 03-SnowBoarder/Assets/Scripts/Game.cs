@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Game : MonoBehaviour {
     [SerializeField] CrashDetection crashDetection = null!;
@@ -10,12 +11,17 @@ public class Game : MonoBehaviour {
     }
 
     static void Lose() {
-        Time.timeScale = 0;
         Debug.Log("Severe injury. Went to the hospital");
+        Reload();
     }
 
     static void Win() {
-        Time.timeScale = 0;
         Debug.Log("Hooray! We won");
+        Reload();
+    }
+
+    static void Reload() {
+        var activeScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(activeScene.buildIndex);
     }
 }
