@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class PackageSpawner : MonoBehaviour {
     [SerializeField] Transform[] points = null!;
-    [SerializeField] SpriteRenderer packageTemplate = null!;
-    [SerializeField] SpriteRenderer customerTemplate = null!;
+    [SerializeField] DeliveryObject packageTemplate = null!;
+    [SerializeField] DeliveryObject customerTemplate = null!;
     [SerializeField] Delivery delivery = null!;
 
     readonly List<Vector3> availablePositions = new();
@@ -30,13 +31,15 @@ public class PackageSpawner : MonoBehaviour {
     void SpawnPackageAndCustomer() {
         var packagePosition = RandomPosition();
         var customerPosition = RandomPosition();
+        var key = Guid.NewGuid();
         var color = Random.ColorHSV();
-        PlaceInstance(packageTemplate, packagePosition, color);
-        PlaceInstance(customerTemplate, customerPosition, color);
+        PlaceInstance(packageTemplate, packagePosition);
+        PlaceInstance(customerTemplate, customerPosition);
 
-        static void PlaceInstance(SpriteRenderer template, Vector3 position, Color color) {
+        void PlaceInstance(DeliveryObject template, Vector3 position) {
             var instance = Instantiate(template, position, Quaternion.identity);
-            instance.color = color;
+            instance.Key = key;
+            instance.Color = color;
             instance.gameObject.SetActive(true);
         }
     }

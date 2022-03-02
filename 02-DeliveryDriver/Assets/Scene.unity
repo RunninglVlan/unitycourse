@@ -548,8 +548,8 @@ MonoBehaviour:
   - {fileID: 1092789623}
   - {fileID: 1479718990}
   - {fileID: 1845358721}
-  packageTemplate: {fileID: 1161754702}
-  customerTemplate: {fileID: 1953369837}
+  packageTemplate: {fileID: 1161754705}
+  customerTemplate: {fileID: 1953369839}
   delivery: {fileID: 1895103313}
 --- !u!1 &213651617
 GameObject:
@@ -4171,6 +4171,7 @@ GameObject:
   - component: {fileID: 1161754703}
   - component: {fileID: 1161754702}
   - component: {fileID: 1161754704}
+  - component: {fileID: 1161754705}
   m_Layer: 0
   m_Name: Package
   m_TagString: Package
@@ -4271,6 +4272,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1161754705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161754701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b1edc281a0b489f8a028dca76291b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 1161754702}
 --- !u!1 &1171610737
 GameObject:
   m_ObjectHideFlags: 0
@@ -7280,6 +7294,7 @@ GameObject:
   - component: {fileID: 1953369838}
   - component: {fileID: 1953369837}
   - component: {fileID: 1953369836}
+  - component: {fileID: 1953369839}
   m_Layer: 0
   m_Name: Customer
   m_TagString: Customer
@@ -7380,6 +7395,19 @@ Transform:
   m_Father: {fileID: 192834748}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1953369839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953369835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b1edc281a0b489f8a028dca76291b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 1953369837}
 --- !u!1 &1980218367
 GameObject:
   m_ObjectHideFlags: 0

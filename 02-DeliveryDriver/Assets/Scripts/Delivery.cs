@@ -8,7 +8,7 @@ public class Delivery : MonoBehaviour {
     public event Action<Vector3> PackagePickedUp = delegate { };
     public event Action<Vector3> PackageDelivered = delegate { };
 
-    SpriteRenderer? package;
+    DeliveryObject? package;
 
     void Awake() => package = null;
 
@@ -19,6 +19,10 @@ public class Delivery : MonoBehaviour {
                 PlacePackage(trigger);
                 break;
             case not null when trigger.CompareTag("Customer"):
+                var customer = trigger.GetComponent<DeliveryObject>();
+                if (customer.Key != package.Key) {
+                    return;
+                }
                 Destroy(package!.gameObject);
                 package = null;
                 Destroy(trigger.gameObject);
@@ -27,13 +31,13 @@ public class Delivery : MonoBehaviour {
         }
 
         void PlacePackage(Collider2D newPackage) {
-            package = newPackage.GetComponent<SpriteRenderer>();
+            package = newPackage.GetComponent<DeliveryObject>();
             var packageTransform = package.transform;
             packageTransform.parent = transform;
             packageTransform.localPosition = packagePosition;
             packageTransform.localRotation = Quaternion.identity;
             packageTransform.localScale = packageScale;
-            package.sortingOrder = 3;
+            package.SortingOrder = 3;
         }
     }
 }
