@@ -11,3 +11,6 @@ Snow Boarder, 20 Lectures: [30](https://www.udemy.com/course/unitycourse/learn/l
   - Set _Follow_ object (Body Target)
   - Choose [Framing Transposer](https://docs.unity3d.com/Packages/com.unity.cinemachine@2.8/manual/CinemachineBodyFramingTransposer.html) Body
     - Modify _Screen X_ if needed
+- Use [Surface Effector 2D](https://docs.unity3d.com/2022.1/Documentation/Manual/class-SurfaceEffector2D.html) to make a conveyor belt out of your collider
+  - Enable _usedByEffector_ on your collider
+- To fix issue when sometimes a RigidBody passes through another Body, use _Continuous Collision Detection_ (but it uses more CPU)
