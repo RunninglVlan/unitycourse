@@ -756,7 +756,7 @@ GameObject:
   - component: {fileID: 992800305}
   - component: {fileID: 992800306}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1384,7 +1384,7 @@ GameObject:
   - component: {fileID: 2118096957}
   - component: {fileID: 2118096958}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Post
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
