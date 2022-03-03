@@ -3,7 +3,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(AudioSource))]
 public class Finish : MonoBehaviour {
-    public event Action PlayerReached = delegate { };
+    public event Action PlayerFinished = delegate { };
 
     ParticleSystem particles = null!;
     new AudioSource audio = null!;
@@ -20,6 +20,6 @@ public class Finish : MonoBehaviour {
 
         particles.Play();
         audio.Play();
-        PlayerReached();
+        PlayerFinished();
     }
 }

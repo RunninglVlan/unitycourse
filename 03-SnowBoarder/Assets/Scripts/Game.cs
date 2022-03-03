@@ -8,7 +8,7 @@ public class Game : MonoBehaviour {
 
     void Awake() {
         crashDetection.PlayerCrashed += Lose;
-        finish.PlayerReached += Win;
+        finish.PlayerFinished += Win;
     }
 
     void Lose() {
