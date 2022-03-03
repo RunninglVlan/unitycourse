@@ -35,6 +35,15 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Boost"",
+                    ""type"": ""Button"",
+                    ""id"": ""96b8e0ae-67f2-4c15-8c7f-b7e4af2501fd"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -70,6 +79,17 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""action"": ""Torque"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6e8120b9-2d3b-437c-9dda-dac23f748f28"",
+                    ""path"": ""<Keyboard>/shift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Boost"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -91,6 +111,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         // Movement
         m_Movement = asset.FindActionMap("Movement", throwIfNotFound: true);
         m_Movement_Torque = m_Movement.FindAction("Torque", throwIfNotFound: true);
+        m_Movement_Boost = m_Movement.FindAction("Boost", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -151,11 +172,13 @@ public partial class @Controls : IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Movement;
     private IMovementActions m_MovementActionsCallbackInterface;
     private readonly InputAction m_Movement_Torque;
+    private readonly InputAction m_Movement_Boost;
     public struct MovementActions
     {
         private @Controls m_Wrapper;
         public MovementActions(@Controls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Torque => m_Wrapper.m_Movement_Torque;
+        public InputAction @Boost => m_Wrapper.m_Movement_Boost;
         public InputActionMap Get() { return m_Wrapper.m_Movement; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -168,6 +191,9 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @Torque.started -= m_Wrapper.m_MovementActionsCallbackInterface.OnTorque;
                 @Torque.performed -= m_Wrapper.m_MovementActionsCallbackInterface.OnTorque;
                 @Torque.canceled -= m_Wrapper.m_MovementActionsCallbackInterface.OnTorque;
+                @Boost.started -= m_Wrapper.m_MovementActionsCallbackInterface.OnBoost;
+                @Boost.performed -= m_Wrapper.m_MovementActionsCallbackInterface.OnBoost;
+                @Boost.canceled -= m_Wrapper.m_MovementActionsCallbackInterface.OnBoost;
             }
             m_Wrapper.m_MovementActionsCallbackInterface = instance;
             if (instance != null)
@@ -175,6 +201,9 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @Torque.started += instance.OnTorque;
                 @Torque.performed += instance.OnTorque;
                 @Torque.canceled += instance.OnTorque;
+                @Boost.started += instance.OnBoost;
+                @Boost.performed += instance.OnBoost;
+                @Boost.canceled += instance.OnBoost;
             }
         }
     }
@@ -191,5 +220,6 @@ public partial class @Controls : IInputActionCollection2, IDisposable
     public interface IMovementActions
     {
         void OnTorque(InputAction.CallbackContext context);
+        void OnBoost(InputAction.CallbackContext context);
     }
 }

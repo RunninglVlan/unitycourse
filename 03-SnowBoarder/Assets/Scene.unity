@@ -212,6 +212,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   torqueAmount: 2
+  speed: 15
+  boostSpeed: 30
+  surfaceEffector: {fileID: 2042086114}
 --- !u!114 &5825191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5450,7 +5453,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2042086112}
   - {fileID: 27794649}
   - {fileID: 436180480}
   - {fileID: 966850744}
@@ -5463,7 +5465,7 @@ Transform:
   - {fileID: 1533728957}
   - {fileID: 919078629}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &436180479
 GameObject:
@@ -11766,8 +11768,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 287387102}
-  m_RootOrder: -1
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!68 &2042086113
 EdgeCollider2D:
