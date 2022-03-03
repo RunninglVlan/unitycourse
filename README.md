@@ -5,6 +5,7 @@ For [C# Unity Developer 2D course](https://www.udemy.com/unitycourse/)
 <table>
   <tr>
     <td><a href="https://runninglvlan.github.io/unitycourse/02-DeliveryDriver/"><img src="/docs/02-DeliveryDriver/thumbnail.png" /></a><br>2. Delivery Driver</td>
+    <td><a href="https://runninglvlan.github.io/unitycourse/03-SnowBoarder/"><img src="/docs/03-SnowBoarder/thumbnail.png" /></a><br>3. Snow Boarder</td>
   </tr>
 </table>
 
