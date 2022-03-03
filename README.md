@@ -31,4 +31,4 @@ For [C# Unity Developer 2D course](https://www.udemy.com/unitycourse/)
   - [Kenney](https://kenney.nl/assets) - images, audio files and 2D/3D models
   - [OpenGameArt](https://opengameart.org/) - 2D/3D art, textures, music, sound FX
   - [Freesound](https://freesound.org/) - sound FX
-- Free Synth sound FX creation tools: [Bfxr](https://www.bfxr.net/) and [ChipTone](http://sfbgames.com/chiptone/)
+- Free Synth sound FX creation tools: [Bfxr](https://www.bfxr.net/) and [ChipTone](https://sfbgames.itch.io/chiptone)
