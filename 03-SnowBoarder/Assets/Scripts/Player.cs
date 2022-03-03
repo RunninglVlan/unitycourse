@@ -14,7 +14,7 @@ public class Player : MonoBehaviour {
     void Awake() {
         controls = new Controls();
         body = GetComponent<Rigidbody2D>();
-        GetComponent<CrashDetection>().PlayerCrashed += StopEffector;
+        GetComponent<CrashDetection>().PlayerCrashed += StopMovement;
         surfaceEffector.speed = speed;
     }
 
@@ -41,5 +41,8 @@ public class Player : MonoBehaviour {
         }
     }
 
-    void StopEffector() => surfaceEffector.enabled = false;
+    void StopMovement() {
+        enabled = false;
+        surfaceEffector.enabled = false;
+    }
 }
