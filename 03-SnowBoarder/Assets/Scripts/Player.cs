@@ -2,7 +2,7 @@
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class Player : MonoBehaviour {
-    [SerializeField] float torqueAmount = 1;
+    [SerializeField] float torqueAmount = 500;
     [SerializeField] float speed = 15;
     [SerializeField] float boostSpeed = 30;
     [SerializeField] SurfaceEffector2D surfaceEffector = null!;
@@ -27,7 +27,7 @@ public class Player : MonoBehaviour {
     void Rotate() {
         var torque = controls.Movement.Torque.ReadValue<float>();
         if (!Mathf.Approximately(torque, 0)) {
-            body.AddTorque(torque * torqueAmount);
+            body.AddTorque(torque * torqueAmount * Time.deltaTime);
         }
     }
 
