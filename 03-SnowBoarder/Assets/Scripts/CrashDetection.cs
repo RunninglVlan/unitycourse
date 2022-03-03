@@ -20,6 +20,7 @@ public class CrashDetection : MonoBehaviour {
 
         particles.Play();
         audio.Play();
+        enabled = false;
         PlayerCrashed();
     }
 }
