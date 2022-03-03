@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(CrashDetection))]
 public class Player : MonoBehaviour {
     [SerializeField] float torqueAmount = 500;
     [SerializeField] float speed = 15;
@@ -13,6 +14,7 @@ public class Player : MonoBehaviour {
     void Awake() {
         controls = new Controls();
         body = GetComponent<Rigidbody2D>();
+        GetComponent<CrashDetection>().PlayerCrashed += StopEffector;
         surfaceEffector.speed = speed;
     }
 
@@ -38,4 +40,6 @@ public class Player : MonoBehaviour {
             surfaceEffector.speed = speed;
         }
     }
+
+    void StopEffector() => surfaceEffector.enabled = false;
 }
