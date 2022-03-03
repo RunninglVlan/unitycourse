@@ -9,7 +9,7 @@ public class CrashDetection : MonoBehaviour {
     void Awake() => particles = GetComponentInChildren<ParticleSystem>();
 
     void OnTriggerEnter2D(Collider2D trigger) {
-        if (!trigger.CompareTag("Level")) {
+        if (!trigger.CompareTag("Ground")) {
             return;
         }
 
